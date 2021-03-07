@@ -43,7 +43,7 @@
     "start": "ionic serve -p 9000",
     "dev": "ionic serve -p 9000",
     "build": "ionic build --prod",
-    "start-prod": "serve -s build",
+    "start-prod": "serve -l 9000 -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
