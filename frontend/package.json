@@ -42,7 +42,7 @@
   "scripts": {
     "start": "ionic serve -p 9000",
     "dev": "ionic serve -p 9000",
-    "build": "react-scripts build",
+    "build": "ionic build --prod",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
