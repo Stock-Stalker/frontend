@@ -40,10 +40,10 @@
     "workbox-streams": "^5.1.4"
   },
   "scripts": {
-    "start": "ionic serve -p 9000",
-    "dev": "ionic serve -p 9000",
-    "build": "ionic build --prod",
-    "start-prod": "serve -l 9000 -s build",
+    "start": "ionic serve",
+    "dev": "ionic serve",
+    "build": "ionic cordova build --prod --release",
+    "start-prod": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
