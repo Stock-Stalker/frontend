@@ -42,7 +42,7 @@
   "scripts": {
     "start": "ionic serve",
     "dev": "ionic serve",
-    "build": "ionic cordova build --prod --release",
+    "build": "ionic build --prod --release",
     "start-prod": "serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
