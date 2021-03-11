@@ -1,4 +1,4 @@
-FROM node:14-alpine as builder
+FROM node:14-alpine as build-stage
 
 LABEL decription="Production image for StockStalker frontend."
 
@@ -16,10 +16,12 @@ RUN npm run build
 
 CMD ["npm", "run", "start-prod"]
 
-# FROM nginx
+# EXPOSE 8100
 #
-# EXPOSE 9000
+# FROM nginx:stable-alpine as production-stage
+#
+# COPY --from=build-stage /app/build /usr/share/nginx/html
 #
 # COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 #
-# COPY --from=builder /app/build /usr/share/nginx/html
+# CMD ["nginx", "-g", "daemon off;"]
