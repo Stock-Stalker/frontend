@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL decription="Production image for StockStalker frontend."
 
-WORKDIR /usr/src/app
+WORKDIR /app
 
 COPY frontend/package*.json ./
 
