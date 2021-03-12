@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 LABEL decription="Production image for StockStalker frontend."
 
-WORKDIR /app
+WORKDIR /usr/src/app
 
 COPY frontend/package*.json ./
 
@@ -14,4 +14,4 @@ COPY frontend .
 
 RUN npm run build
 
-CMD ["npm,", "run", "start-prod"]
+CMD ["npm", "run", "start-prod"]
