@@ -14,8 +14,6 @@ COPY frontend .
 
 RUN npm run build
 
-WORKDIR /usr/src/app/build
-
 EXPOSE 8100
 
 CMD ["npm,", "run", "start-prod"]
