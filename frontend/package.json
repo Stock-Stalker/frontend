@@ -43,7 +43,7 @@
     "start": "ionic serve",
     "dev": "ionic serve",
     "build": "ionic build --prod --release",
-    "start-prod": "serve -s build",
+    "start-prod": "serve -s build -l 8100",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

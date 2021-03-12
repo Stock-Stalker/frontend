@@ -14,10 +14,8 @@ COPY frontend .
 
 RUN npm run build
 
-COPY frontend/server.js dist/server.js
-
-WORKDIR /usr/src/app/dist
+WORKDIR /usr/src/app/build
 
 EXPOSE 8100
 
-CMD ["node", "server.js"]
+CMD ["npm,", "run", "start-prod"]
