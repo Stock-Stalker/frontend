@@ -1,0 +1,42 @@
+.ellipse {
+    border-radius: 200%;
+}
+
+.glass-primary {
+    background: rgba(255,255, 255, 0.01);
+    box-shadow: var(--glass-primary);
+    -webkit-box-shadow: var(--glass-primary);
+}
+
+.glass-secondary {
+    background: rgba(255,255, 255, 0.01);
+    box-shadow: var(--glass-secondary);
+    -webkit-box-shadow: var(--glass-secondary);
+}
+
+.glass-tertiary {
+    background: rgba(255,255, 255, 0.01);
+    box-shadow: var(--glass-tertiary);
+    -webkit-box-shadow: var(--glass-tertiary);
+}
+
+.neon-primary {
+    text-shadow: var(--neon-primary);
+    -webkit-text-shadow: var(--neon-primary);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+.neon-secondary {
+    text-shadow: var(--neon-secondary);
+    -webkit-text-shadow: var(--neon-secondary);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+.neon-tertiary {
+    text-shadow: var(--neon-tertiary);
+    -webkit-text-shadow: var(--neon-tertiary);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
