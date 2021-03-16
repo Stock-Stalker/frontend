@@ -3,19 +3,19 @@
 }
 
 .glass-primary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-primary);
     -webkit-box-shadow: var(--glass-primary);
 }
 
 .glass-secondary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-secondary);
     -webkit-box-shadow: var(--glass-secondary);
 }
 
 .glass-tertiary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-tertiary);
     -webkit-box-shadow: var(--glass-tertiary);
 }
