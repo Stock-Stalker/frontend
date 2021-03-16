@@ -1,6 +1,6 @@
 /* Ionic Variables and Theming. For more info, please see:
 http://ionicframework.com/docs/theming/ */
-
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 /** Ionic CSS Variables **/
 :root {
     /** primary **/
@@ -111,22 +111,24 @@ http://ionicframework.com/docs/theming/ */
         inset 0px 1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.2),
         inset 0px 1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.2);
 
-    --neon-primary: 0px 0px 18px rgba(var(--ion-color-primary-rgb), 0.6),
-        0px 0px 70px rgba(var(--ion-color-primary-rgb), 0.6);
+    --neon-primary: 0px 0px 18px rgba(var(--ion-color-primary-rgb), 0.4),
+        0px 0px 70px rgba(var(--ion-color-primary-rgb), 0.4);
     --neon-primary-inset: inset 0px 0px 7px
-        rgba(var(--ion-color-primary-rgb), 0.6);
+        rgba(var(--ion-color-primary-rgb), 0.4);
 
-    --neon-secondary: 0px 0px 18px rgba(var(--ion-color-secondary-rgb), 0.6),
-        0px 0px 70px rgba(var(--ion-color-secondary-rgb), 0.6);
+    --neon-secondary: 0px 0px 18px rgba(var(--ion-color-secondary-rgb), 0.4),
+        0px 0px 70px rgba(var(--ion-color-secondary-rgb), 0.4);
     --neon-secondary-inset: inset 0px 0px 7px
-        rgba(var(--ion-color-secondary-rgb), 0.6);
+        rgba(var(--ion-color-secondary-rgb), 0.4);
 
-    --neon-tertiary: 0px 0px 18px rgba(var(--ion-color-tertiary-rgb), 0.6),
-        0px 0px 70px rgba(var(--ion-color-tertiary-rgb), 0.6);
+    --neon-tertiary: 0px 0px 18px rgba(var(--ion-color-tertiary-rgb), 0.4),
+        0px 0px 70px rgba(var(--ion-color-tertiary-rgb), 0.4);
     --neon-tertiary-inset: inset 0px 0px 7px
-        rgba(var(--ion-color-tertiary-rgb), 0.6);
+        rgba(var(--ion-color-tertiary-rgb), 0.4);
 
     --ion-toolbar-background: transparent;
+
+    --ion-font-family: "Rubik", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -40,3 +40,31 @@
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 }
+
+.text-primary {
+    color: var(--ion-color-primary);
+}
+
+.text-secondary {
+    color: var(--ion-color-secondary);
+}
+
+.text-tertiary {
+    color: var(--ion-color-tertiary);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem !important;
+}
+
+h3 {
+    font-size: 2.5rem !important;
+}

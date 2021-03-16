@@ -7,17 +7,8 @@ const WelcomeEllipse: React.FC = () => {
             <div className="glass-primary ellipse welcome">
                 <div className="welcome-aspect-ratio" />
                 <div className="welcome-content">
-                    <h1 className="neon-primary">LOREM IPSUM</h1>
-                    <p>
-                        Explore{' '}
-                        <a
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            href="https://ionicframework.com/docs/components"
-                        >
-                            UI Components
-                        </a>
-                    </p>
+                    <h3 className="neon-tertiary text-tertiary uppercase">Welcome to stock stalker</h3>
+                    <h2 className="neon-tertiary uppercase">Get a prediction</h2> 
                 </div>
             </div>
         </div>
