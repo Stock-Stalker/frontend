@@ -3,21 +3,39 @@
 }
 
 .glass-primary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-primary);
     -webkit-box-shadow: var(--glass-primary);
 }
 
 .glass-secondary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-secondary);
     -webkit-box-shadow: var(--glass-secondary);
 }
 
 .glass-tertiary {
-    background: rgba(255,255, 255, 0.01);
+    background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-tertiary);
     -webkit-box-shadow: var(--glass-tertiary);
+}
+
+.glass-input-primary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-primary);
+    -webkit-box-shadow: var(--glass-input-primary);
+}
+
+.glass-input-secondary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-secondary);
+    -webkit-box-shadow: var(--glass-input-secondary);
+}
+
+.glass-input-tertiary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-tertiary);
+    -webkit-box-shadow: var(--glass-input-tertiary);
 }
 
 .neon-primary {
@@ -39,4 +57,34 @@
     -webkit-text-shadow: var(--neon-tertiary);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
+}
+
+.text-primary {
+    color: var(--ion-color-primary);
+}
+
+.text-secondary {
+    color: var(--ion-color-secondary);
+}
+
+.text-tertiary {
+    color: var(--ion-color-tertiary);
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
 }

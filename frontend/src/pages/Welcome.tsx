@@ -1,26 +1,14 @@
-import React from 'react';
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import ExploreContainer from '../components/ExploreContainer';
-import './Welcome.css';
+import React from 'react'
+import Layout from '../components/Layout'
+import WelcomeEllipse from '../components/WelcomeEllipse'
+import './Welcome.css'
 
 const Welcome: React.FC = () => {
-  return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Logo</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Logo</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        <ExploreContainer />
-      </IonContent>
-    </IonPage>
-  );
-};
+    return (
+        <Layout>
+            <WelcomeEllipse />
+        </Layout>
+    )
+}
 
-export default Welcome;
+export default Welcome
