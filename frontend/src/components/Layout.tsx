@@ -5,10 +5,14 @@ import {
     IonHeader,
     IonToolbar,
 } from '@ionic/react'
+import SearchBar from './Searchbar'
 import logo from '../assets/logo-tertiary.svg'
 import './Layout.css'
 
-const Layout: React.FC = (props) => {
+interface LayoutProps {
+  searchbar?: boolean,
+}
+const Layout: React.FC<LayoutProps> = (props) => {
     return (
         <IonPage>
             <IonHeader>
@@ -19,6 +23,7 @@ const Layout: React.FC = (props) => {
                         width="100"
                         alt="Stock Stalker"
                     />
+                    {props.searchbar && <SearchBar />}
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
@@ -30,6 +35,7 @@ const Layout: React.FC = (props) => {
                             width="100"
                             alt="Stock Stalker"
                         />
+                        {props.searchbar && <SearchBar />}
                     </IonToolbar>
                 </IonHeader>
                 {props.children && props.children}

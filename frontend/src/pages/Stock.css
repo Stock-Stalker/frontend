@@ -3,10 +3,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    padding-top: 25%;
-
+    top: 11vh;
+    transform: translateY(11vh);
+    height: 78vh;
 }
 
 .ellipse-stock {
@@ -24,21 +23,21 @@
 }
 
 .ellipse-stock-content {
-    margin-top: -40%;
+    margin-top: -50%;
     word-wrap: break-word;
     display: flex;
     flex-direction: column;
 }
 
 .card-stock {
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
     margin-top: -45%;
 }
 
 .chart {
     width: 95%;
-    height: 38vh;
+    min-height: 30vh;
 }
 
 @media (max-width: 900px) {

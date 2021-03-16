@@ -1,12 +1,10 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import SearchBar from '../components/Searchbar'
 import './Stock.css'
 
 const Stock: React.FC = () => {
     return (
-        <Layout>
-            <SearchBar />
+        <Layout searchbar={ true }>
             <div className="container">
                 <div className="glass-primary ellipse ellipse-stock">
                     <div className="ellipse-stock-aspect-ratio" />
