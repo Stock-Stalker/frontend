@@ -22,3 +22,22 @@
 .container a {
   text-decoration: none;
 }
+
+.welcome {
+    max-width: 50vw;
+    width: 50vw;
+    min-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.welcome-aspect-ratio {
+    padding-top: 100%;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+}

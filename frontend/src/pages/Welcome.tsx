@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import ExploreContainer from '../components/ExploreContainer';
+import WelcomeEllipse from '../components/WelcomeEllipse';
 import './Welcome.css';
 
 const Welcome: React.FC = () => {
   return (
     <Layout>
-        <ExploreContainer />
+        <WelcomeEllipse />
     </Layout>
   );
 };
