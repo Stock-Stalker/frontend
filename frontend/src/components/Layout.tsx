@@ -1,5 +1,6 @@
 import React from 'react';
 import { IonPage, IonContent, IonHeader, IonTitle, IonToolbar } from '@ionic/react';
+import './Layout.css';
 
 const Layout: React.FC = (props) => {
   return (
