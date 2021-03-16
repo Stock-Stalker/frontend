@@ -1,0 +1,48 @@
+.container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-top: 25%;
+
+}
+
+.ellipse-stock {
+    min-width: 300px;
+    width: 90%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.ellipse-stock-aspect-ratio {
+    padding-top: 100%;
+}
+
+.ellipse-stock-content {
+    margin-top: -40%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-stock {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    margin-top: -45%;
+}
+
+.chart {
+    width: 95%;
+    height: 38vh;
+}
+
+@media (max-width: 900px) {
+    .ellipse-stock {
+        margin-left: calc(10% / 2);
+    }
+}

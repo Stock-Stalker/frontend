@@ -2,6 +2,11 @@
     border-radius: 200%;
 }
 
+.card {
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: left;
+}
+
 .glass-primary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-primary);
