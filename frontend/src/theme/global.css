@@ -20,6 +20,24 @@
     -webkit-box-shadow: var(--glass-tertiary);
 }
 
+.glass-input-primary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-primary);
+    -webkit-box-shadow: var(--glass-input-primary);
+}
+
+.glass-input-secondary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-secondary);
+    -webkit-box-shadow: var(--glass-input-secondary);
+}
+
+.glass-input-tertiary {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-tertiary);
+    -webkit-box-shadow: var(--glass-input-tertiary);
+}
+
 .neon-primary {
     text-shadow: var(--neon-primary);
     -webkit-text-shadow: var(--neon-primary);

@@ -1,4 +1,5 @@
 import React from 'react'
+import SearchBar from './Searchbar'
 import './WelcomeEllipse.css'
 
 const WelcomeEllipse: React.FC = () => {
@@ -13,6 +14,7 @@ const WelcomeEllipse: React.FC = () => {
                     <h2 className="neon-tertiary uppercase">
                         Get a prediction
                     </h2>
+                    <SearchBar />
                 </div>
             </div>
         </div>
