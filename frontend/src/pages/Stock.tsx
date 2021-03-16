@@ -17,7 +17,7 @@ const Stock: React.FC = () => {
                 <div className="glass-primary card card-stock">
                     <h1>$  120.34</h1>
                     <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
-                    <div className="chart">
+                    <div className="chart glass-tertiary">
 
                     </div>
                 </div>

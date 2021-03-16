@@ -36,8 +36,10 @@
 }
 
 .chart {
-    width: 95%;
-    min-height: 30vh;
+    width: 100%;
+    min-height: 29vh;
+    margin-top: 0.5rem;
+    border-radius: 20px;
 }
 
 @media (max-width: 900px) {
