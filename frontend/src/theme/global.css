@@ -57,14 +57,16 @@
     text-transform: uppercase;
 }
 
-h1 {
-    font-size: 4rem;
-}
+@media (min-width: 900px) {
+    h1 {
+        font-size: 4rem;
+    }
 
-h2 {
-    font-size: 3rem !important;
-}
+    h2 {
+        font-size: 3rem;
+    }
 
-h3 {
-    font-size: 2.5rem !important;
+    h3 {
+        font-size: 2.5rem;
+    }
 }

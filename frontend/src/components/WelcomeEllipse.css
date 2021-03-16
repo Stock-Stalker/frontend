@@ -26,7 +26,7 @@
 .welcome {
     max-width: 50vw;
     width: 50vw;
-    min-width: 500px;
+    min-width: 600px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -47,4 +47,10 @@
 .welcome-content h3 {
     margin: auto;
     max-width: 400px;
+}
+
+@media (max-width: 900px) {
+    .welcome {
+        margin-left: calc((100% - 600px) / 2);
+    }
 }

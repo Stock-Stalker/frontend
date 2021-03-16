@@ -7,8 +7,12 @@ const WelcomeEllipse: React.FC = () => {
             <div className="glass-primary ellipse welcome">
                 <div className="welcome-aspect-ratio" />
                 <div className="welcome-content">
-                    <h3 className="neon-tertiary text-tertiary uppercase">Welcome to stock stalker</h3>
-                    <h2 className="neon-tertiary uppercase">Get a prediction</h2> 
+                    <h3 className="neon-tertiary text-tertiary uppercase">
+                        Welcome to stock stalker
+                    </h3>
+                    <h2 className="neon-tertiary uppercase">
+                        Get a prediction
+                    </h2>
                 </div>
             </div>
         </div>

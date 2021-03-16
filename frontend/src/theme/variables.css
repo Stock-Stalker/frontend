@@ -128,7 +128,7 @@ http://ionicframework.com/docs/theming/ */
 
     --ion-toolbar-background: transparent;
 
-    --ion-font-family: "Rubik", sans-serif;
+    --ion-font-family: 'Rubik', sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
