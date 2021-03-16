@@ -3,9 +3,9 @@ import {
     IonPage,
     IonContent,
     IonHeader,
-    IonTitle,
     IonToolbar,
 } from '@ionic/react'
+import logo from '../assets/logo-tertiary.svg'
 import './Layout.css'
 
 const Layout: React.FC = (props) => {
@@ -13,13 +13,23 @@ const Layout: React.FC = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <IonTitle>Logo</IonTitle>
+                    <img
+                        src={ logo }
+                        className="logo"
+                        width="100"
+                        alt="Stock Stalker"
+                    />
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
                 <IonHeader collapse="condense">
                     <IonToolbar>
-                        <IonTitle size="large">Logo</IonTitle>
+                        <img
+                            src={ logo }
+                            className="logo"
+                            width="100"
+                            alt="Stock Stalker"
+                        />
                     </IonToolbar>
                 </IonHeader>
                 {props.children && props.children}
