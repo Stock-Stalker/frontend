@@ -36,10 +36,12 @@ const SearchBar: React.FC = () => {
             value={searchTerm}
             onIonChange={(e) => setSearchTerm(e.detail.value!)}
         ></IonSearchbar>
-        {searchTerm.length > 0 && <div className="search-results">
+        {searchTerm.length > 0 && <div className="search-results glass-input-primary">
             {
-                filteredStocks.map(stock => (
-                    <span key={stock.symbol}>{stock.symbol + ' ' + stock.companyName.split('-')[0]}</span>
+                filteredStocks.map((stock, index) => (
+                    <div className="result" key={stock.symbol + index.toString()}>
+                        <span>{stock.symbol + ' ' + stock.companyName.split('-')[0]}</span>
+                    </div>
                 ))
             }
         </div>}
