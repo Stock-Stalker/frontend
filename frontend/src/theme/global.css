@@ -11,36 +11,48 @@
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-primary);
     -webkit-box-shadow: var(--glass-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-secondary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-secondary);
     -webkit-box-shadow: var(--glass-secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-tertiary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-tertiary);
     -webkit-box-shadow: var(--glass-tertiary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-input-primary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-primary);
     -webkit-box-shadow: var(--glass-input-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-input-secondary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-secondary);
     -webkit-box-shadow: var(--glass-input-secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-input-tertiary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-tertiary);
     -webkit-box-shadow: var(--glass-input-tertiary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .neon-primary {

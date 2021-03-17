@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import circleHollow from '../assets/Circle_Hollow_Primary.png'
 import './Stock.css'
 
 const Stock: React.FC = () => {
@@ -14,12 +15,15 @@ const Stock: React.FC = () => {
                         <span className="font-weight-bold text-tertiary">StockStalker prediction <br /><label className="pill">UP</label></span>
                     </div>
                 </div>
-                <div className="glass-primary card card-stock">
-                    <h1>$  120.34</h1>
-                    <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
-                    <div className="chart glass-tertiary">
+                <div>
+                    <div className="glass-primary card card-stock">
+                        <h1>$  120.34</h1>
+                        <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
+                        <div className="chart glass-tertiary">
 
+                        </div>
                     </div>
+                    <img className="hollow-primary" src={ circleHollow } alt="Hollow Circle Neon Illustration" />
                 </div>
             </div>
 

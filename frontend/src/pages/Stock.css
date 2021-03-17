@@ -42,6 +42,13 @@
     border-radius: 20px;
 }
 
+.hollow-primary {
+    position: relative;
+    top: -14vh;
+    left: -22vw;
+    z-index: -1;
+}
+
 @media (min-width: 900px) {
     .card-stock {
         border-radius: 40px;
@@ -69,5 +76,8 @@
 @media (max-width: 900px) {
     .ellipse-stock {
         margin-left: calc(10% / 2);
+    }
+    .hollow-primary {
+        display: none;
     }
 }
