@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { IonSearchbar } from '@ionic/react'
+import { IonSearchbar, IonRouterLink } from '@ionic/react'
 import './Searchbar.css'
 
 interface Stock {
@@ -39,9 +39,11 @@ const SearchBar: React.FC = () => {
         {searchTerm.length > 0 && <div className="search-results glass-input-primary">
             {
                 filteredStocks.map((stock, index) => (
-                    <div className="result" key={stock.symbol + index.toString()}>
-                        <span>{stock.symbol + ' ' + stock.companyName.split('-')[0]}</span>
-                    </div>
+                    <IonRouterLink href={"/stock/" + stock.symbol} key={stock.symbol + index.toString()}>
+                        <div className="result">
+                            <span>{stock.symbol + ' ' + stock.companyName.split('-')[0]}</span>
+                        </div>
+                    </IonRouterLink>
                 ))
             }
         </div>}
