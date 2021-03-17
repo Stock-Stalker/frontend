@@ -38,13 +38,17 @@ const SearchBar: React.FC = () => {
         ></IonSearchbar>
         {searchTerm.length > 0 && <div className="search-results glass-input-primary">
             {
-                filteredStocks.map((stock, index) => (
+                filteredStocks.length > 0 ? filteredStocks.map((stock, index) => (
                     <IonRouterLink href={"/stock/" + stock.symbol} key={stock.symbol + index.toString()}>
                         <div className="result">
                             <span>{stock.symbol + ' ' + stock.companyName.split('-')[0]}</span>
                         </div>
                     </IonRouterLink>
                 ))
+                :
+                <div className="result">
+                    <span>No results found.</span>
+                </div>
             }
         </div>}
         </>
