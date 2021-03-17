@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/Layout'
+import LineGraph from '../components/LineGraph'
 import './Stock.css'
 
 const Stock: React.FC = () => {
@@ -18,7 +19,7 @@ const Stock: React.FC = () => {
                     <h1>$  120.34</h1>
                     <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
                     <div className="chart glass-tertiary">
-
+                      <LineGraph />
                     </div>
                 </div>
             </div>
