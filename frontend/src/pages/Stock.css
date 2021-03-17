@@ -82,6 +82,10 @@
     border-top-left-radius: 40px;
 }
 
+.card-stock span {
+    font-size: 20px;
+}
+
 .card-stock img {
     margin-right: 0.5rem;
 }

@@ -15,7 +15,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
             <h3 className="company-name">Apple <span className="company-symbol">APPL</span></h3>
             <div className="glass-primary card card-stock">
                 <h3>$ 120.34</h3>
-                <span>
+                <span className={`text-${color}`}>
                     <img width="30px" src={ prediction ? arrowUp : arrowDown } alt="StockStalker Arrow" /> $ 7.84
                     (5.53%)
                 </span>
