@@ -1,11 +1,16 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 
-const startValue = 100
-const data = [startValue, 90, 80, 70, 80, 90, 100, 110, 120, 130, 140, 145]
+interface LineProps {
+    isUp: boolean
+}
 
-const LineGraph: React.FC = () => (
-  <Line
+const startValue = 100
+const data = [startValue, 90, 80, 75, 80, 90, 100, 110, 120, 130, 140, 145]
+
+const LineGraph: React.FC<LineProps> = ({ isUp }) => {
+    const color = isUp ? '#7DFAFF' : '#FFAF5C'
+  return (<Line
     data={{
       labels: data,
       datasets: [
@@ -15,14 +20,15 @@ const LineGraph: React.FC = () => (
             'rgba(0, 0, 0, 0)'
           ],
           borderColor: [
-            '#65C8FF'
+            color
           ],
           borderWidth: 3,
           pointStyle: 'rectRounded',
-          pointBackgroundColor: '#65C8FF',
-          pointBorderColor: '#65C8FF',
+          pointBackgroundColor: color,
+          pointBorderColor: color,
           pointRadius: '0',
-          pointHoverRadius: '6'
+          pointHoverRadius: '6',
+          fill: '+1',
         },
         {
           data: [startValue, startValue, startValue, startValue, startValue, startValue, startValue, startValue, startValue, startValue, startValue, startValue],
@@ -34,8 +40,8 @@ const LineGraph: React.FC = () => (
           ],
           borderWidth: 1,
           pointStyle: 'rectRounded',
-          pointBackgroundColor: '#65C8FF',
-          pointBorderColor: '#65C8FF',
+          pointBackgroundColor: color,
+          pointBorderColor: color,
           pointRadius: '0',
           pointHoverRadius: '0',
           borderDash: [10,5],
@@ -62,7 +68,7 @@ const LineGraph: React.FC = () => (
         enabled: false
       },
     }}
-  />
-)
+  />)
+}
 
 export default LineGraph

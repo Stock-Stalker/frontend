@@ -21,7 +21,7 @@ const Stock: React.FC = () => {
                         <h1>$  120.34</h1>
                         <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
                         <div className="chart glass-tertiary">
-                            <LineGraph />
+                            <LineGraph isUp={ true } />
                         </div>
                     </div>
                     <img className="hollow-primary" src={ circleHollow } alt="Hollow Circle Neon Illustration" />
