@@ -1,0 +1,7 @@
+.header-md::after {
+    background-image: none;
+}
+
+.logo {
+    margin: 1rem 2rem;
+}
