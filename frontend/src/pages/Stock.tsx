@@ -20,6 +20,14 @@ const Stock: React.FC = () => {
                         </div>
                     </div>
                 </div>
+                <div className="col-3">
+                    <div className="glass-tertiary ellipse ellipse-prediction">
+                        <h4 className="text-tertiary">StockStalker Prediction:</h4>
+                        <div className="glass-tertiary pill">
+                            UP
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     )
