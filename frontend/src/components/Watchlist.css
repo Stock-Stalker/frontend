@@ -1,0 +1,25 @@
+.watchlist-container {
+    /* position: absolute;
+    right: 100px;
+    bottom: 100px; */
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    border: 1.5px solid var(--ion-color-primary);
+}
+
+.watchlist-header {
+    border-bottom: 1.5px solid var(--ion-color-primary);
+    width: 100%;
+}
+
+.watchlist-heading {
+    margin: 20px 0 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.watchlist {
+    width: 100%;
+    padding: 10px;
+}
