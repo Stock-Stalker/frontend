@@ -11,7 +11,7 @@ const Stock: React.FC = () => {
                     <div className="ellipse-stock-content">
                         <h1>Apple</h1>
                         <p>AAPL</p>
-                        <span className="font-weight-bold text-tertiary">StockStalker prediction <label className="pill">UP</label></span>
+                        <span className="font-weight-bold text-tertiary">StockStalker prediction <br /><label className="pill">UP</label></span>
                     </div>
                 </div>
                 <div className="glass-primary card card-stock">

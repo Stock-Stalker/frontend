@@ -11,7 +11,7 @@
 .ellipse-stock {
     min-width: 300px;
     width: 90%;
-    max-width: 500px;
+    max-width: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,6 +40,30 @@
     min-height: 29vh;
     margin-top: 0.5rem;
     border-radius: 20px;
+}
+
+@media (min-width: 900px) {
+    .card-stock {
+        border-radius: 40px;
+        margin-left: 30%;
+        margin-top: -18%;
+        width: 60%;
+    }
+    .ellipse-stock {
+        margin-top: -5%;
+        margin-left: calc(15% / 2);
+    }
+
+    .ellipse-stock-content {
+        margin-top: -20%;
+        text-align: center;
+        max-width: 200px;
+    }
+    .ellipse-stock-content span {
+        /* max-width: 150px; */
+        font-size: 22px;
+        text-align: center;
+    }
 }
 
 @media (max-width: 900px) {
