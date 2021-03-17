@@ -77,7 +77,11 @@ http://ionicframework.com/docs/theming/ */
 
     /** Gradients **/
 
-    --ion-gradient-primary: linear-gradient(90deg, #0079d3 0%, #00c9ff 100%);
+    --ion-gradient-primary: linear-gradient(
+        90deg,
+        #0079d3 0%,
+        #00c9ff 100%
+    );
     --ion-gradient-secondary: linear-gradient(
         90deg,
         #ff8c3f 0%,
