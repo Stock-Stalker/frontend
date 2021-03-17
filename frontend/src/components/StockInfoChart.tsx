@@ -20,7 +20,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     (5.53%)
                 </span>
                 <div className={`chart glass-${color}`}>
-                    <LineGraph isUp={true} />
+                    <LineGraph prediction={ prediction } />
                 </div>
             </div>
         </>

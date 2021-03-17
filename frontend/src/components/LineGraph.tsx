@@ -1,15 +1,15 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
 
-interface LineProps {
-    isUp: boolean
+interface Prediction {
+    prediction: boolean
 }
 
 const startValue = 100
 const data = [startValue, 90, 80, 75, 80, 90, 100, 110, 120, 130, 140, 145]
 
-const LineGraph: React.FC<LineProps> = ({ isUp }) => {
-    const color = isUp ? '#7DFAFF' : '#FFAF5C'
+const LineGraph: React.FC<Prediction> = ({ prediction }) => {
+    const color = prediction ? '#7DFAFF' : '#FFAF5C'
     return (
         <Line
             data={{
