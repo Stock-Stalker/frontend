@@ -35,3 +35,10 @@ ion-searchbar ion-icon {
     color: var(--ion-color-tertiary) !important;
     top: 20px !important;
 }
+
+.search-results {
+    max-height: 150px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+}
