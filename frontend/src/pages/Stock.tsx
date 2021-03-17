@@ -5,14 +5,15 @@ import StockPredictionEllipse from '../components/StockPredictionEllipse'
 import './Stock.css'
 
 const Stock: React.FC = () => {
+    const prediction = false
     return (
         <Layout searchbar={true}>
             <div className="container">
                 <div className="col-1-2">
-                    <StockInfoChart />
+                    <StockInfoChart prediction={ prediction } />
                 </div>
                 <div className="col-3">
-                    <StockPredictionEllipse prediction={ true } />
+                    <StockPredictionEllipse prediction={ prediction } />
                 </div>
             </div>
         </Layout>

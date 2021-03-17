@@ -82,6 +82,10 @@
     border-top-left-radius: 40px;
 }
 
+.card-stock img {
+    margin-right: 0.5rem;
+}
+
 .chart {
     width: 100%;
     min-height: 29vh;
