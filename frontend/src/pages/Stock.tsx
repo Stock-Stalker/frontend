@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import StockInfoChart from '../components/StockInfoChart'
+import StockPredictionEllipse from '../components/StockPredictionEllipse'
 import './Stock.css'
 
 const Stock: React.FC = () => {
@@ -11,12 +12,7 @@ const Stock: React.FC = () => {
                     <StockInfoChart />
                 </div>
                 <div className="col-3">
-                    <div className="glass-tertiary ellipse ellipse-prediction">
-                        <h4 className="text-tertiary">StockStalker Prediction:</h4>
-                        <div className="glass-tertiary pill">
-                            UP
-                        </div>
-                    </div>
+                    <StockPredictionEllipse prediction={ true } />
                 </div>
             </div>
         </Layout>

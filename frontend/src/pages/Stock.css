@@ -65,15 +65,15 @@
 }
 
 .ellipse-prediction h4 {
-    max-width:200px;
+    max-width: 200px;
     margin: 0 auto;
 }
 
 .pill {
     width: 100px;
-    padding: 0.5rem;
+    /* padding: 0.5rem; */
     border-radius: 50px;
-    margin: 10px auto;
+    margin: 20px auto;
 }
 
 .card-stock {
