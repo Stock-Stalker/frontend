@@ -1,31 +1,31 @@
 import React from 'react'
 import Layout from '../components/Layout'
+<<<<<<< HEAD
 import LineGraph from '../components/LineGraph'
 import Watchlist from '../components/Watchlist'
+=======
+import StockInfoChart from '../components/StockInfoChart'
+import StockPredictionEllipse from '../components/StockPredictionEllipse'
+>>>>>>> 07928b37fb88a571df576a54d10512c9ea676c14
 import './Stock.css'
 
 const Stock: React.FC = () => {
+    const prediction = false
     return (
-        <Layout searchbar={ true }>
+        <Layout searchbar={true}>
             <div className="container">
-                <div className="glass-primary ellipse ellipse-stock">
-                    <div className="ellipse-stock-aspect-ratio" />
-                    <div className="ellipse-stock-content">
-                        <h1>Apple</h1>
-                        <p>AAPL</p>
-                        <span className="font-weight-bold text-tertiary">StockStalker prediction <br /><label className="pill">UP</label></span>
-                    </div>
+                <div className="col-1-2">
+                    <StockInfoChart prediction={ prediction } />
                 </div>
-                <div className="glass-primary card card-stock">
-                    <h1>$  120.34</h1>
-                    <span><img src="" alt="StockStalker Arrow Up" /> $ 7.84 (5.53%)</span>
-                    <div className="chart glass-tertiary">
-                      <LineGraph />
-                    </div>
+                <div className="col-3">
+                    <StockPredictionEllipse prediction={ prediction } />
                 </div>
             </div>
+<<<<<<< HEAD
             <Watchlist />
 
+=======
+>>>>>>> 07928b37fb88a571df576a54d10512c9ea676c14
         </Layout>
     )
 }

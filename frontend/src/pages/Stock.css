@@ -3,11 +3,17 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: 11vh;
-    transform: translateY(11vh);
-    height: 78vh;
+    top: 6vh;
+    transform: translateY(6vh);
+    /* height: 78vh; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40vh, auto);
+    overflow: hidden;
+    padding: 2rem;
 }
-
+/*
 .ellipse-stock {
     min-width: 300px;
     width: 90%;
@@ -27,12 +33,61 @@
     word-wrap: break-word;
     display: flex;
     flex-direction: column;
+} */
+
+.col-1-2 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: left;
+}
+
+.col-1-2 .company-name {
+    padding-left: 2rem;
+}
+
+.col-1-2 .company-symbol {
+    font-weight: 400 !important;
+}
+
+.col-3 {
+    grid-column: 3 / 3;
+}
+
+.ellipse-prediction {
+    grid-row: 1 / 1;
+    width: 300px;
+    height: 300px;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.ellipse-prediction h4 {
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+.pill {
+    width: 100px;
+    /* padding: 0.5rem; */
+    border-radius: 50px;
+    margin: 20px auto;
 }
 
 .card-stock {
+    margin-top: 20px;
     border-top-right-radius: 40px;
     border-top-left-radius: 40px;
-    margin-top: -45%;
+}
+
+.card-stock span {
+    font-size: 20px;
+}
+
+.card-stock img {
+    margin-right: 0.5rem;
 }
 
 .chart {
@@ -42,14 +97,12 @@
     border-radius: 20px;
 }
 
+
 @media (min-width: 900px) {
     .card-stock {
         border-radius: 40px;
-        margin-left: 30%;
-        margin-top: -18%;
-        width: 60%;
     }
-    .ellipse-stock {
+    /* .ellipse-stock {
         margin-top: -5%;
         margin-left: calc(15% / 2);
     }
@@ -60,14 +113,14 @@
         max-width: 200px;
     }
     .ellipse-stock-content span {
-        /* max-width: 150px; */
+         max-width: 150px;
         font-size: 22px;
         text-align: center;
-    }
+    }*/
 }
 
 @media (max-width: 900px) {
-    .ellipse-stock {
+    /* .ellipse-stock {
         margin-left: calc(10% / 2);
-    }
+    } */
 }
