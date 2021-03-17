@@ -46,8 +46,8 @@ const SearchBar: React.FC = () => {
                     </IonRouterLink>
                 ))
                 :
-                <div className="result">
-                    <span>No results found.</span>
+                <div className="no-result">
+                    <span className="text-primary">No results found.</span>
                 </div>
             }
         </div>}
