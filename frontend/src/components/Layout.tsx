@@ -12,13 +12,15 @@ const Layout: React.FC<LayoutProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <IonToolbar>
-                    <img
-                        src={logo}
-                        className="logo"
-                        width="100"
-                        alt="Stock Stalker"
-                    />
-                    {props.searchbar && <SearchBar />}
+                    <div className="header-lg">
+                        <img
+                            src={logo}
+                            className="logo"
+                            width="150"
+                            alt="Stock Stalker"
+                        />
+                        {props.searchbar && <SearchBar />}
+                    </div>
                 </IonToolbar>
             </IonHeader>
             <IonContent fullscreen>
