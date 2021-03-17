@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 import LineGraph from '../components/LineGraph'
+import Watchlist from '../components/Watchlist'
 import './Stock.css'
 
 const Stock: React.FC = () => {
@@ -23,6 +24,7 @@ const Stock: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <Watchlist />
 
         </Layout>
     )
