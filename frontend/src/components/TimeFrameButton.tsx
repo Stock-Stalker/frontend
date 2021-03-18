@@ -10,7 +10,7 @@ const TimeFrameButton: React.FC<TimeFrame> = ({ timeFrame, prediction }) => {
     const color = prediction ? 'tertiary' : 'secondary'
 
     return (
-        <div className={`timeFrameButton glass-${color}`}>
+        <div className={`timeFrameButton bg-desat-${color}`}>
             <p className={`text-${color}`}>{timeFrame}</p>
         </div>
     )
