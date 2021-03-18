@@ -45,10 +45,10 @@ ion-searchbar ion-icon {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
+    max-width: 445px;
 }
 
 .search-results .result {
-    max-width: 100%;
     padding-left: 40px;
     height: 40px;
     min-height: 40px;
@@ -56,6 +56,7 @@ ion-searchbar ion-icon {
     text-align: left;
     display: flex;
     align-items: center;
+    max-width: 100%;
 }
 
 .search-results .result:hover {
@@ -72,4 +73,10 @@ ion-searchbar ion-icon {
     text-align: left;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 900px) {
+    .search-results {
+        max-width: 98vw;
+    }
 }
