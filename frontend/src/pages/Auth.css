@@ -24,6 +24,7 @@
 }
 
 .auth-content {
+    margin-top: -2rem;
     display: flex;
     flex-direction: column;
 }
@@ -50,4 +51,11 @@ form button {
     background: var(--ion-gradient-primary);
     font-size: 18px;
     font-weight: bold;
+    transition: 0.3s ease;
+}
+
+form button:hover {
+    cursor: pointer;
+    transform: translateY(-2px);
+    transition: 0.3s ease;
 }
