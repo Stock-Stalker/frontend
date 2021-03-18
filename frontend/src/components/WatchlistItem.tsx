@@ -4,12 +4,16 @@ import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
 interface WatchlistItemDetails {
-    symbol: string,
-    price: number,
+    symbol: string
+    price: number
     prediction: boolean
 }
 
-const WatchlistItem: React.FC<WatchlistItemDetails> = ({ symbol, price, prediction }) => {
+const WatchlistItem: React.FC<WatchlistItemDetails> = ({
+    symbol,
+    price,
+    prediction,
+}) => {
     const color = prediction ? 'tertiary' : 'secondary'
 
     return (
@@ -18,7 +22,11 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({ symbol, price, predicti
             <div className="watchlist-item-details">
                 <p className={`text-${color}`}>${price}</p>
                 <span className={`text-${color}`}>
-                    <img width="30px" src={ prediction ? arrowUp : arrowDown } alt="StockStalker Arrow" />
+                    <img
+                        width="30px"
+                        src={prediction ? arrowUp : arrowDown}
+                        alt="StockStalker Arrow"
+                    />
                 </span>
             </div>
         </div>

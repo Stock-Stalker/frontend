@@ -11,10 +11,10 @@ const Stock: React.FC = () => {
         <Layout searchbar={true}>
             <div className="container">
                 <div className="col-1-2">
-                    <StockInfoChart prediction={ prediction } />
+                    <StockInfoChart prediction={prediction} />
                 </div>
                 <div className="col-3">
-                    <StockPredictionEllipse prediction={ prediction } />
+                    <StockPredictionEllipse prediction={prediction} />
                     <Watchlist />
                 </div>
             </div>

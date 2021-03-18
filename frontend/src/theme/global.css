@@ -1,4 +1,9 @@
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700 !important;
     font-family: var(--ion-font-family) !important;
 }
@@ -37,15 +42,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-desat-primary {
-    background: rgba(var(--ion-color-primary-rgb), 0.40);
+    background: rgba(var(--ion-color-primary-rgb), 0.4);
 }
 
 .bg-desat-secondary {
-    background: rgba(var(--ion-color-secondary-rgb), 0.40);
+    background: rgba(var(--ion-color-secondary-rgb), 0.4);
 }
 
 .bg-desat-tertiary {
-    background: rgba(var(--ion-color-tertiary-rgb), 0.40);
+    background: rgba(var(--ion-color-tertiary-rgb), 0.4);
 }
 
 .glass-input-primary {
