@@ -14,3 +14,7 @@
 .watchlist-item-details p {
     margin-right: 15px;
 }
+
+.watchlist-item-details img {
+    padding-top: 15px;
+}

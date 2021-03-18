@@ -1,6 +1,8 @@
 .watchlist-container {
     margin: auto;
-    width: 350px;
+    min-width: 300px;
+    width: 100%;
+    max-width: 450px !important;
     min-height: 300px;
     border-radius: 20px;
     border: 1.5px solid var(--ion-color-primary);
