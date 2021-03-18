@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
+import api from '../api'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
@@ -9,6 +10,14 @@ interface Prediction {
 }
 
 const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
+    const fetchStockData = useCallback(async () => {
+        const symbol = 'aapl'
+        const res = await api.get(`/stocks/${symbol}`)
+        console.log(res.data)
+    }, [])
+
+    fetchStockData()
+
     const color = prediction ? 'tertiary' : 'secondary'
     const [timeFrame, setTimeFrame] = useState<string>('D')
     return (
