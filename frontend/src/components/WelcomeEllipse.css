@@ -52,7 +52,7 @@
     margin-top: 10%;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .welcome {
         margin-left: calc((100% - 600px) / 2);
     }
