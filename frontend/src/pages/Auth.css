@@ -81,4 +81,14 @@ form button:hover {
         height: 99vw;
         min-height: 300px;
     }
+
+    form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input, form button {
+        width: 80%;
+        max-width: 80%;
+    }
 }
