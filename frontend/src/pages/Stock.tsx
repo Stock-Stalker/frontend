@@ -9,7 +9,7 @@ const Stock: React.FC = () => {
     const prediction = false
     return (
         <Layout searchbar={true}>
-            <div className="container">
+            <div className="stock-container">
                 <div className="col-1-2">
                     <StockInfoChart prediction={prediction} />
                 </div>
