@@ -76,7 +76,7 @@ ion-searchbar ion-icon {
     align-items: center;
 }
 
-@media (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .search-results {
         max-width: 98vw;
     }
