@@ -59,3 +59,14 @@ form button:hover {
     transform: translateY(-2px);
     transition: 0.3s ease;
 }
+
+@media (max-width: 800px) {
+    .auth {
+        max-width: 99vw;
+        width: 99vw;
+        min-width: 300px;
+        max-height: 99vw;
+        height: 99vw;
+        min-height: 300px;
+    }
+}

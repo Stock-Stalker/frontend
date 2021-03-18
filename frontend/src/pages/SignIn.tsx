@@ -8,7 +8,7 @@ const SignIn: React.FC = () => {
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [errorMessage, setErrorMessage] = useState<string>('')
-    async function signIn(event) {
+    async function signIn(event: any) {
         event.preventDefault()
         if (username && username.length > 0 && password && password.length > 0) {
             try {
