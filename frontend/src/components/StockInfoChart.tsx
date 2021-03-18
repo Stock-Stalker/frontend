@@ -1,5 +1,6 @@
 import React from 'react'
 import LineGraph from '../components/LineGraph'
+import TimeFrameButtons from '../components/TimeFrameButtons'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
@@ -22,6 +23,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                 <div className={`chart glass-${color}`}>
                     <LineGraph prediction={ prediction } />
                 </div>
+                <TimeFrameButtons prediction={ prediction } />
             </div>
         </>
     )
