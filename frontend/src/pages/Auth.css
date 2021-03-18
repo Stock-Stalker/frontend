@@ -41,6 +41,17 @@ form button {
 
 form input {
     color: var(--ion-color-tertiary) !important;
+    display: block !important;
+    border: none;
+    min-height: 50px;
+    padding-left: 30px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    outline: none;
+    /* width: 100%; */
+    box-shadow: none;
 }
 
 form button {

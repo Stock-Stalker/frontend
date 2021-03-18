@@ -43,7 +43,7 @@ const SignIn: React.FC = () => {
                                 type="text"
                                 className="glass-input-primary"
                                 placeholder="Username"
-                                onChange={(e) => {
+                                onChange={e => {
                                     setUsername(e.target.value)
                                     setErrorMessage('')
                                 }}
@@ -52,7 +52,7 @@ const SignIn: React.FC = () => {
                                 type="password"
                                 className="glass-input-primary"
                                 placeholder="Password"
-                                onChange={(e) => {
+                                onChange={e => {
                                     setPassword(e.target.value)
                                     setErrorMessage('')
                                 }}
