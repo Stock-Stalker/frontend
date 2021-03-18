@@ -5,16 +5,3 @@
 .logo {
     margin: 1rem 2rem;
 }
-
-.header-lg {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 0.5rem;
-}
-
-.header-lg ion-searchbar {
-    padding-top: 1rem;
-    width: 50%;
-    margin: auto;
-}
