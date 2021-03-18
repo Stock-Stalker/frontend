@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import StockInfoChart from '../components/StockInfoChart'
 import StockPredictionEllipse from '../components/StockPredictionEllipse'
+import Watchlist from '../components/Watchlist'
 import './Stock.css'
 
 const Stock: React.FC = () => {
@@ -14,6 +15,7 @@ const Stock: React.FC = () => {
                 </div>
                 <div className="col-3">
                     <StockPredictionEllipse prediction={ prediction } />
+                    <Watchlist />
                 </div>
             </div>
         </Layout>
