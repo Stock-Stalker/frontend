@@ -148,7 +148,7 @@ http://ionicframework.com/docs/theming/ */
     --neon-tertiary-inset: inset 0px 0px 7px
         rgba(var(--ion-color-tertiary-rgb), 0.4);
 
-    --ion-toolbar-background: #ffffff;
+    --ion-toolbar-background: var(--ion-color-dark);
 
     --ion-font-family: 'Rubik', sans-serif;
 }
