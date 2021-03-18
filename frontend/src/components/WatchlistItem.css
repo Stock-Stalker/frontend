@@ -1,0 +1,16 @@
+.watchlist-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.watchlist-item-details {
+    display: flex;
+    flex-direction: row;
+}
+
+.watchlist-item-details p {
+    margin-right: 15px;
+}
