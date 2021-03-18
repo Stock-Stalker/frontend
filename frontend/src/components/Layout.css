@@ -1,5 +1,6 @@
 .header-md::after {
     background-image: none;
+    background: var(--ion-color-dark);
 }
 
 .logo {
