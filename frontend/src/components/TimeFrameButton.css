@@ -1,0 +1,9 @@
+.timeFrameButton {
+    border-radius: 4px;
+    height: 25px;
+    width: 25px;
+}
+
+.timeFrameButton p {
+    font-size: 12px;
+}
