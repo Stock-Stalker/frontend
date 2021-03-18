@@ -1,9 +1,7 @@
 .watchlist-container {
-    /* position: absolute;
-    right: 100px;
-    bottom: 100px; */
-    width: 300px;
-    height: 300px;
+    margin: auto;
+    width: 350px;
+    height: 280px;
     border-radius: 20px;
     border: 1.5px solid var(--ion-color-primary);
 }
