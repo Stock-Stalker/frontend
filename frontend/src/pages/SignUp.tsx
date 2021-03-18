@@ -4,19 +4,24 @@ import axios from 'axios'
 import Layout from '../components/Layout'
 import './Auth.css'
 const SignUp: React.FC = () => {
-    const history = useHistory();
+    const history = useHistory()
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const [errorMessage, setErrorMessage] = useState<string>('')
     async function signUp(event: any) {
         event.preventDefault()
-        if (username && username.length > 0 && password && password.length > 0) {
+        if (
+            username &&
+            username.length > 0 &&
+            password &&
+            password.length > 0
+        ) {
             try {
                 await axios.post(process.env.REACT_APP_URI + '/user/signup', {
                     username: username,
-                    password: password
+                    password: password,
                 })
-                history.push("/welcome");
+                history.push('/welcome')
             } catch (error) {
                 setErrorMessage('Something went wrong')
             }
@@ -33,14 +38,14 @@ const SignUp: React.FC = () => {
                         <h1 className="neon-tertiary text-tertiary uppercase">
                             Sign Up
                         </h1>
-                        <form onSubmit={ signUp }>
+                        <form onSubmit={signUp}>
                             <input
                                 type="text"
                                 className="glass-input-primary"
                                 placeholder="Username"
                                 onChange={(e) => {
-                                    setUsername(e.target.value);
-                                    setErrorMessage('');
+                                    setUsername(e.target.value)
+                                    setErrorMessage('')
                                 }}
                             />
                             <input
@@ -48,12 +53,16 @@ const SignUp: React.FC = () => {
                                 className="glass-input-primary"
                                 placeholder="Password"
                                 onChange={(e) => {
-                                    setPassword(e.target.value);
-                                    setErrorMessage('');
+                                    setPassword(e.target.value)
+                                    setErrorMessage('')
                                 }}
                             />
                             <button type="submit">Sign Up</button>
-                            { errorMessage && <small className="text-error">{errorMessage}</small> }
+                            {errorMessage && (
+                                <small className="text-error">
+                                    {errorMessage}
+                                </small>
+                            )}
                         </form>
                     </div>
                 </div>

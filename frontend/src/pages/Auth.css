@@ -34,7 +34,8 @@ form {
     flex-direction: column;
 }
 
-form input, form button {
+form input,
+form button {
     margin-top: 1rem;
 }
 
