@@ -5,6 +5,7 @@ import { IonReactRouter } from '@ionic/react-router'
 import Welcome from './pages/Welcome'
 import Stock from './pages/Stock'
 import SignUp from './pages/SignUp'
+import SignIn from './pages/SignIn'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
@@ -38,6 +39,9 @@ const App: React.FC = () => (
                 </Route>
                 <Route exact path="/signup">
                     <SignUp />
+                </Route>
+                <Route exact path="/signin">
+                    <SignIn />
                 </Route>
                 <Route exact path="/">
                     <Redirect to="/welcome" />
