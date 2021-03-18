@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
@@ -10,7 +10,8 @@ interface Prediction {
 
 const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
     const color = prediction ? 'tertiary' : 'secondary'
-
+    const [timeFrame, setTimeFrame] = useState<string>('D')
+    console.log(timeFrame)
     return (
         <>
             <h3 className="company-name">Apple <span className="company-symbol">APPL</span></h3>
@@ -23,7 +24,11 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                 <div className={`chart glass-${color}`}>
                     <LineGraph prediction={ prediction } />
                 </div>
-                <TimeFrameButtons prediction={ prediction } />
+                <TimeFrameButtons
+                    prediction={ prediction }
+                    selectedTimeFrame={ timeFrame }
+                    toggleTimeFrame={ (t: string) => setTimeFrame(t) }
+                />
             </div>
         </>
     )
