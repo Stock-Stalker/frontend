@@ -23,7 +23,7 @@ const TimeFrameButton: React.FC<TimeFrame> = ({
             }`}
             onClick={() => toggleTimeFrame(timeFrame)}
         >
-            <p className={`text-${color}`}>{timeFrame}</p>
+            <span className={`text-${color}`}>{timeFrame}</span>
         </div>
     )
 }
