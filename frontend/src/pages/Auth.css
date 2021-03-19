@@ -87,7 +87,8 @@ form button:hover {
         justify-content: center;
     }
 
-    form input, form button {
+    form input,
+    form button {
         width: 80%;
         max-width: 80%;
     }
