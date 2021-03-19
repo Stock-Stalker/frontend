@@ -19,7 +19,6 @@ const SearchBar: React.FC = () => {
     useEffect(() => {
         loadStockList()
     }, [])
-    console.log(stockList)
 
     const filteredStocks =
         stockList &&
