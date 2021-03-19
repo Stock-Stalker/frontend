@@ -21,9 +21,8 @@ const TimeFrameButton: React.FC<TimeFrame> = ({
             className={`timeFrameButton bg-desat-${
                 selectedTimeFrame === timeFrame ? color : ''
             }`}
-            onClick={() => toggleTimeFrame(timeFrame)}
-        >
-            <p className={`text-${color}`}>{timeFrame}</p>
+            onClick={() => toggleTimeFrame(timeFrame)}>
+            <span className={`text-${color}`}>{timeFrame}</span>
         </div>
     )
 }
