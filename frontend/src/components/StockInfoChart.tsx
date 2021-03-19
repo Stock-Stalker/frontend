@@ -34,12 +34,34 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
     } else {
+        const timeFrames = ['D']
+
         const {
             companyName,
             currentPrice,
             historicalData,
             symbol,
         } = data.stockData
+
+        const getTimeFrames = () => {
+            switch (true) {
+                case historicalData.length > 251:
+                    timeFrames.push('W', 'M', '3M', '6M', 'Y')
+                    break
+                case historicalData.length > 125:
+                    timeFrames.push('W', 'M', '3M', '6M')
+                    break
+                case historicalData.length > 62:
+                    timeFrames.push('W', 'M', '3M')
+                    break
+                case historicalData.length > 20:
+                    timeFrames.push('W', 'M')
+                    break
+                case historicalData.length > 4:
+                    timeFrames.push('W')
+                    break
+            }
+        }
 
         const getGraphData = () => {
             let days
@@ -83,6 +105,8 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
             return { graphData, baseline }
         }
 
+        getTimeFrames()
+
         const { graphData, baseline } = getGraphData()
 
         const open = graphData[0]
@@ -123,6 +147,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     <TimeFrameButtons
                         prediction={isPositive}
                         selectedTimeFrame={timeFrame}
+                        timeFrames={timeFrames}
                         toggleTimeFrame={(t: string) => setTimeFrame(t)}
                     />
                 </div>
