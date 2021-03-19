@@ -72,7 +72,7 @@ form button:hover {
     transition: 0.3s ease;
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .auth {
         max-width: 99vw;
         width: 99vw;
@@ -80,5 +80,16 @@ form button:hover {
         max-height: 99vw;
         height: 99vw;
         min-height: 300px;
+    }
+
+    form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input,
+    form button {
+        width: 80%;
+        max-width: 80%;
     }
 }

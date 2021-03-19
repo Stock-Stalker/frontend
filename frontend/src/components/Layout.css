@@ -6,15 +6,34 @@
     margin: 1rem 2rem;
 }
 
-.header-lg {
+.header-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 0.5rem;
 }
 
-.header-lg ion-searchbar {
-    padding-top: 1rem;
+.header-content ion-searchbar {
+    padding-top: 0.5rem;
     width: 50%;
     margin: auto;
+}
+
+ion-header {
+    margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 580px) {
+    .header-content {
+        flex-direction: column !important;
+        padding-bottom: 1rem;
+    }
+    .header-content img {
+        max-width: 100px;
+    }
+    .header-content ion-searchbar {
+        padding-top: 1rem;
+        width: 100%;
+        margin: auto;
+    }
 }
