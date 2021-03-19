@@ -19,7 +19,7 @@
 .searchbar-container {
     padding-top: 0.5rem;
     width: 50%;
-    height: 350px;
+    max-height: 350px;
     margin: auto;
     display: flex;
     flex-direction: column;
