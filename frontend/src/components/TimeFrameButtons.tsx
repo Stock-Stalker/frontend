@@ -35,6 +35,12 @@ const TimeFrameButtons: React.FC<TimeFrameButtonsProps> = ({
             />
             <TimeFrameButton
                 prediction={prediction}
+                timeFrame="3M"
+                selectedTimeFrame={selectedTimeFrame}
+                toggleTimeFrame={toggleTimeFrame}
+            />
+            <TimeFrameButton
+                prediction={prediction}
                 timeFrame="6M"
                 selectedTimeFrame={selectedTimeFrame}
                 toggleTimeFrame={toggleTimeFrame}
@@ -42,12 +48,6 @@ const TimeFrameButtons: React.FC<TimeFrameButtonsProps> = ({
             <TimeFrameButton
                 prediction={prediction}
                 timeFrame="Y"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="ALL"
                 selectedTimeFrame={selectedTimeFrame}
                 toggleTimeFrame={toggleTimeFrame}
             />
