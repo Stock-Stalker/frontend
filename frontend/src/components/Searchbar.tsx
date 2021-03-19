@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios'
+import api from '../api'
 import { IonSearchbar, IonRouterLink } from '@ionic/react'
 import './Searchbar.css'
 
@@ -12,7 +12,7 @@ const SearchBar: React.FC = () => {
     const [stockList, setStockList] = useState<Array<Stock>>([])
 
     async function loadStockList() {
-        const res: any = await axios.get(process.env.REACT_APP_URI + '/stocks')
+        const res: any = await api.get('/stocks')
         setStockList(res.data)
     }
 
