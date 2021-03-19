@@ -1,4 +1,4 @@
 // const onSignOut = useCallback(() => {
 //     localStorage.removeItem('token')
-//     history.push('/auth')
+//     history.push('/welcome')
 // }, [history])
