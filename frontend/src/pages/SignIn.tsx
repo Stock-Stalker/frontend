@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import axios from 'axios'
+import api from '../api'
 import Layout from '../components/Layout'
 import './Auth.css'
 const SignIn: React.FC = () => {
@@ -17,7 +17,7 @@ const SignIn: React.FC = () => {
             password.length > 0
         ) {
             try {
-                await axios.post(process.env.REACT_APP_URI + '/user/signin', {
+                await api.post('/user/signin', {
                     username: username,
                     password: password,
                 })

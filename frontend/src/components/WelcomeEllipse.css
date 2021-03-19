@@ -52,6 +52,10 @@
     margin-top: 10%;
 }
 
+.welcome-content .search-results {
+    max-width: 445px;
+}
+
 @media only screen and (max-width: 900px) {
     .welcome {
         margin-left: calc((100% - 600px) / 2);
