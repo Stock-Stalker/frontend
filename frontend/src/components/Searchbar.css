@@ -46,7 +46,6 @@ ion-searchbar ion-icon {
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    max-width: 445px;
 }
 
 .search-results .result {
