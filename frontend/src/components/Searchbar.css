@@ -40,20 +40,23 @@ ion-searchbar ion-icon {
 .search-results {
     margin-top: 10px;
     margin-bottom: -200px;
+    padding-bottom: 1rem;
     min-height: 200px;
     max-height: 200px;
     border-radius: 50px;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;
-    max-width: 445px;
+    font-weight: bold;
+}
+.search-results .result:first-child {
+    padding-top: 1rem;
 }
 
 .search-results .result {
     padding-left: 40px;
-    height: 40px;
-    min-height: 40px;
-    max-height: 40px;
+    padding-right: 40px;
+    line-height: 35px;
     text-align: left;
     display: flex;
     align-items: center;

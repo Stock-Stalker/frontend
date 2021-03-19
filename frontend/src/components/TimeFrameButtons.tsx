@@ -6,51 +6,26 @@ interface TimeFrameButtonsProps {
     prediction: boolean
     selectedTimeFrame: string
     toggleTimeFrame: (t: string) => void
+    timeFrames: Array<string>
 }
 
 const TimeFrameButtons: React.FC<TimeFrameButtonsProps> = ({
     prediction,
     selectedTimeFrame,
     toggleTimeFrame,
+    timeFrames,
 }) => {
     return (
         <div className="timeFrameButtonContainer">
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="D"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="W"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="M"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="6M"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="Y"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
-            <TimeFrameButton
-                prediction={prediction}
-                timeFrame="ALL"
-                selectedTimeFrame={selectedTimeFrame}
-                toggleTimeFrame={toggleTimeFrame}
-            />
+            {timeFrames.map((timeFrame: string) => (
+                <TimeFrameButton
+                    key={timeFrame}
+                    prediction={prediction}
+                    timeFrame={timeFrame}
+                    selectedTimeFrame={selectedTimeFrame}
+                    toggleTimeFrame={toggleTimeFrame}
+                />
+            ))}
         </div>
     )
 }
