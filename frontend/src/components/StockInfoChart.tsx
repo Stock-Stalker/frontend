@@ -123,7 +123,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
         return (
             <>
                 <h3 className="company-name">
-                    {companyName}{' '}
+                    {stock.companyName.split('-')[0]}{' '}
                     <span className="company-symbol">{symbol}</span>
                 </h3>
                 <div className="glass-primary card card-stock">
