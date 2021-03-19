@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import axios from 'axios'
+import api from '../api'
 import Layout from '../components/Layout'
 import './Auth.css'
 const SignUp: React.FC = () => {
@@ -17,7 +17,7 @@ const SignUp: React.FC = () => {
             password.length > 0
         ) {
             try {
-                await axios.post(process.env.REACT_APP_URI + '/user/signup', {
+                await api.post('/user/signup', {
                     username: username,
                     password: password,
                 })
@@ -43,7 +43,7 @@ const SignUp: React.FC = () => {
                                 type="text"
                                 className="glass-input-primary"
                                 placeholder="Username"
-                                onChange={e => {
+                                onChange={(e) => {
                                     setUsername(e.target.value)
                                     setErrorMessage('')
                                 }}
@@ -52,7 +52,7 @@ const SignUp: React.FC = () => {
                                 type="password"
                                 className="glass-input-primary"
                                 placeholder="Password"
-                                onChange={e => {
+                                onChange={(e) => {
                                     setPassword(e.target.value)
                                     setErrorMessage('')
                                 }}
