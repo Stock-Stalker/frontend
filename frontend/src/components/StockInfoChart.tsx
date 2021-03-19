@@ -4,6 +4,7 @@ import { useQuery } from 'react-query'
 import api from '../api'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
+import WatchlistToggle from '../components/WatchlistToggle'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
@@ -120,12 +121,18 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
         ).toFixed(2)
         const color = isPositive ? 'tertiary' : 'secondary'
 
+        const watchlist: Array<string> = ['AAPL', 'ABNB', 'TSLA', 'GM']
         return (
             <>
                 <h3 className="company-name">
                     {companyName}{' '}
                     <span className="company-symbol">{symbol}</span>
                 </h3>
+                <WatchlistToggle
+                    inWatchlist={ watchlist.includes(symbol)}
+                    symbol={ symbol }
+                    prediction={ isPositive }
+                />
                 <div className="glass-primary card card-stock">
                     <h3>$ {parseInt(currentPrice).toFixed(2)}</h3>
                     <span className={`text-${color}`}>
