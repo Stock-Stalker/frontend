@@ -1,41 +1,80 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700 !important;
+    font-family: var(--ion-font-family) !important;
+}
+
 .ellipse {
     border-radius: 200%;
+}
+
+.card {
+    padding: 2rem 2rem 2rem 2rem;
+    text-align: left;
 }
 
 .glass-primary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-primary);
     -webkit-box-shadow: var(--glass-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-secondary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-secondary);
     -webkit-box-shadow: var(--glass-secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-tertiary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-tertiary);
     -webkit-box-shadow: var(--glass-tertiary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bg-desat-primary {
+    background: rgba(var(--ion-color-primary-rgb), 0.4);
+}
+
+.bg-desat-secondary {
+    background: rgba(var(--ion-color-secondary-rgb), 0.4);
+}
+
+.bg-desat-tertiary {
+    background: rgba(var(--ion-color-tertiary-rgb), 0.4);
 }
 
 .glass-input-primary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-primary);
     -webkit-box-shadow: var(--glass-input-primary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-input-secondary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-secondary);
     -webkit-box-shadow: var(--glass-input-secondary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .glass-input-tertiary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-tertiary);
     -webkit-box-shadow: var(--glass-input-tertiary);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .neon-primary {
@@ -75,7 +114,7 @@
     text-transform: uppercase;
 }
 
-@media (min-width: 900px) {
+@media only screen and (min-width: 900px) {
     h1 {
         font-size: 4rem;
     }
