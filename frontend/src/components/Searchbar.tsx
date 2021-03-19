@@ -22,13 +22,10 @@ const SearchBar: React.FC = () => {
 
     const filteredStocks =
         stockList &&
-        stockList.filter(stock => {
+        stockList.filter((stock) => {
             const searchable = stock.companyName.split('-')[0] + stock.symbol
-            const searchTerms = searchTerm
-                .toLowerCase()
-                .trim()
-                .split(' ')
-            return searchTerms.every(term => {
+            const searchTerms = searchTerm.toLowerCase().trim().split(' ')
+            return searchTerms.every((term) => {
                 return searchable.toLowerCase().includes(term)
             })
         })
@@ -38,16 +35,16 @@ const SearchBar: React.FC = () => {
                 type="text"
                 placeholder="Search for a stock"
                 value={searchTerm}
-                onIonChange={e => setSearchTerm(e.detail.value!)}
-            ></IonSearchbar>
+                onIonChange={(e) =>
+                    setSearchTerm(e.detail.value!)
+                }></IonSearchbar>
             {searchTerm.length > 0 && (
                 <div className="search-results glass-input-primary">
                     {filteredStocks.length > 0 ? (
                         filteredStocks.map((stock, index) => (
                             <IonRouterLink
                                 href={'/stock/' + stock.symbol}
-                                key={stock.symbol + index.toString()}
-                            >
+                                key={stock.symbol + index.toString()}>
                                 <div className="result">
                                     <span>
                                         {stock.symbol +
