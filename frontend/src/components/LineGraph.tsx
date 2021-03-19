@@ -53,7 +53,7 @@ const LineGraph: React.FC<Prediction> = ({
             height={300}
             width={600}
             options={{
-                maintainAspctRatio: false,
+                maintainAspectRatio: false,
                 scales: {
                     xAxes: [
                         {
