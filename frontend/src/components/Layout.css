@@ -17,7 +17,7 @@
 }
 
 .searchbar-container {
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
     width: 50%;
     height: 350px;
     margin: auto;
@@ -42,6 +42,10 @@ ion-header {
     margin-right: 1rem;
 }
 
+.sign-out:hover {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 1200px) {
     .searchbar-container {
         right: 20vw;
@@ -57,9 +61,9 @@ ion-header {
         max-width: 100px;
     }
     .header-content .searchbar-container {
-        padding-top: 70px;
+        margin-top: 70px;
         width: 100%;
-        margin: auto;
+        /* margin: auto; */
     }
     ion-header {
         margin-bottom: 8rem;
