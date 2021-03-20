@@ -3,20 +3,27 @@ import { Line } from 'react-chartjs-2'
 
 interface Prediction {
     prediction: boolean
+    timeFrame: string
+    graphData: Array<String>
+    baseline: Array<String>
 }
 
-const startValue = 100
-const data = [startValue, 90, 80, 75, 80, 90, 100, 110, 120, 130, 140, 145]
-
-const LineGraph: React.FC<Prediction> = ({ prediction }) => {
+const LineGraph: React.FC<Prediction> = ({
+    prediction,
+    timeFrame,
+    graphData,
+    baseline,
+}) => {
     const color = prediction ? '#7DFAFF' : '#FFAF5C'
+
     return (
         <Line
             data={{
-                labels: data,
+                labels: graphData,
                 datasets: [
                     {
-                        data: data,
+                        label: 'stockData',
+                        data: graphData,
                         backgroundColor: ['rgba(0, 0, 0, 0)'],
                         borderColor: [color],
                         borderWidth: 3,
@@ -28,20 +35,8 @@ const LineGraph: React.FC<Prediction> = ({ prediction }) => {
                         fill: '+1',
                     },
                     {
-                        data: [
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                            startValue,
-                        ],
+                        label: 'baseline',
+                        data: baseline,
                         backgroundColor: ['rgba(0, 0, 0, 0)'],
                         borderColor: ['rgba(255, 255, 255, 0.5)'],
                         borderWidth: 1,
@@ -58,7 +53,7 @@ const LineGraph: React.FC<Prediction> = ({ prediction }) => {
             height={300}
             width={600}
             options={{
-                maintainAspctRatio: false,
+                maintainAspectRatio: false,
                 scales: {
                     xAxes: [
                         {
