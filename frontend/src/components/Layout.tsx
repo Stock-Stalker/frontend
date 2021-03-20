@@ -23,6 +23,9 @@ const Layout: React.FC<LayoutProps> = (props) => {
                             <SearchBar />
                         </div>
                     )}
+                    <button className="sign-out text-tertiary">
+                        Sign out
+                    </button>
                 </div>
             </IonHeader>
             <IonContent fullscreen>

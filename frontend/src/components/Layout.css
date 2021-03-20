@@ -32,6 +32,15 @@ ion-header {
     margin-bottom: 5rem;
 }
 
+.sign-out {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--ion-color-tertiary);
+    padding: 0.5rem 1rem;
+}
+
 @media only screen and (min-width: 1200px) {
     .searchbar-container {
         right: 20vw;
