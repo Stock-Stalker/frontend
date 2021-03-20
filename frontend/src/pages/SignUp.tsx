@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 import api from '../api'
+import { connect } from 'react-redux'
+import { setToken } from '../actions/token'
 import Layout from '../components/Layout'
 import './Auth.css'
-const SignUp: React.FC = () => {
+
+interface Auth {
+    setToken: (token: string) => void;
+}
+
+const SignUp: React.FC<Auth> = (props) => {
     const history = useHistory()
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
@@ -17,10 +24,12 @@ const SignUp: React.FC = () => {
             password.length > 0
         ) {
             try {
-                await api.post('/user/signup', {
+                const res: any = await api.post('/user/signup', {
                     username: username,
                     password: password,
                 })
+                localStorage.setItem('token', res.data.token);
+                props.setToken(res.data.token)
                 history.push('/welcome')
             } catch (error) {
                 setErrorMessage('Something went wrong')
@@ -71,4 +80,7 @@ const SignUp: React.FC = () => {
     )
 }
 
-export default SignUp
+export default connect(
+  null,
+  { setToken }
+)(SignUp)
