@@ -11,7 +11,7 @@ interface DashboardState {
 }
 
 const Dashboard: React.FC = () => {
-    const { token, watchlist } = useSelector((state: DashboardState) => state)
+    const { token } = useSelector((state: DashboardState) => state)
 
     if (!token) {
         return <Redirect to="/signin" />
@@ -22,9 +22,7 @@ const Dashboard: React.FC = () => {
                 <div className="popular-stocks">
                 </div>
                 <div className="dashboard-watchlist">
-                    <Watchlist
-                        watchlist={ watchlist }
-                    />
+                    <Watchlist />
                 </div>
             </div>
         </Layout>
@@ -34,7 +32,6 @@ const Dashboard: React.FC = () => {
 const mapStateToProps = (state: DashboardState) => {
     return {
         token: state.token,
-        watchlist: state.watchlist
     };
 };
 export default connect(mapStateToProps) (Dashboard);
