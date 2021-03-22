@@ -12,3 +12,37 @@
     overflow: hidden;
     padding: 2rem;
 }
+
+.popular-stocks {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    text-align: left;
+}
+
+.dashboard-watchlist {
+    grid-column: 3 / 3;
+}
+
+@media only screen and (max-width: 800px) {
+    .popular-stocks {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+    }
+
+    .dashboard-watchlist {
+        grid-column: 1 / 4;
+        grid-row: 2 / 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(40vh, auto);
+    }
+}
+
+@media only screen and (max-width: 724px) {
+    .dashboard-watchlist {
+        grid-column: 1 / 4;
+        grid-row: 2 / 2;
+        display: block;
+    }
+}

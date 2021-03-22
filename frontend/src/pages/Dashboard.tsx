@@ -8,7 +8,9 @@ const Welcome: React.FC = () => {
             <div className="dashboard-container">
                 <div className="popular-stocks">
                 </div>
-                <Watchlist />
+                <div className="dashboard-watchlist">
+                    <Watchlist />
+                </div>
             </div>
         </Layout>
     )
