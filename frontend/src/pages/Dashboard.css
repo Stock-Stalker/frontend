@@ -1,0 +1,14 @@
+.dashboard-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6vh;
+    transform: translateY(6vh);
+    /* height: 78vh; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40vh, auto);
+    overflow: hidden;
+    padding: 2rem;
+}
