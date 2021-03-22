@@ -1,8 +1,16 @@
 import React from 'react'
+import { useSelector, connect } from 'react-redux';
 import WatchlistItem from './WatchlistItem'
 import './Watchlist.css'
 
+interface WatchlistState {
+    token: string
+    watchlist: Array<string>
+}
+
 const Watchlist: React.FC = () => {
+    const { watchlist } = useSelector((state: WatchlistState) => state)
+
     return (
         <div className="watchlist-container">
             <div className="watchlist-header">
@@ -26,4 +34,9 @@ const Watchlist: React.FC = () => {
     )
 }
 
-export default Watchlist
+const mapStateToProps = (state: WatchlistState) => {
+    return {
+        watchlist: state.watchlist,
+    };
+};
+export default connect(mapStateToProps) (Watchlist);
