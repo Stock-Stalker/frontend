@@ -12,8 +12,12 @@ const SearchBar: React.FC = () => {
     const [stockList, setStockList] = useState<Array<Stock>>([])
 
     async function loadStockList() {
-        const res: any = await api.get('/stocks')
-        setStockList(res.data)
+        try {
+            const res: any = await api.get('/stock')
+            setStockList(res.data)
+        } catch (err) {
+            console.log(err)
+        }
     }
 
     useEffect(() => {
