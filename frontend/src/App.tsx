@@ -4,6 +4,7 @@ import { IonApp, IonRouterOutlet } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 import { useSelector, connect } from 'react-redux';
 import Welcome from './pages/Welcome'
+import Dashboard from './pages/Dashboard'
 import Stock from './pages/Stock'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
@@ -46,6 +47,9 @@ const App: React.FC<AppProps> = (props) => {
                     </Route>
                     <Route exact path="/welcome">
                         <Welcome />
+                    </Route>
+                    <Route exact path="/dashboard">
+                        <Dashboard />
                     </Route>
                     <Route exact path="/stock/:symbol">
                         <Stock />
