@@ -21,7 +21,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
     const { symbol } = useParams<ParamTypes>()
 
     const fetchStockData = useCallback(async () => {
-        const res = await api.get(`/stocks/${symbol}`)
+        const res = await api.get(`/stock/${symbol}`)
         return res.data
     }, [])
 
