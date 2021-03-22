@@ -17,7 +17,7 @@
 }
 
 .searchbar-container {
-    padding-top: 0.5rem;
+    margin-top: 0.5rem;
     width: 50%;
     height: 350px;
     margin: auto;
@@ -25,11 +25,25 @@
     flex-direction: column;
     position: absolute;
     z-index: 1;
-    right: 0;
+    right: 6rem;
 }
 
 ion-header {
     margin-bottom: 5rem;
+}
+
+.sign-out {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--ion-color-tertiary);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.sign-out:hover {
+    cursor: pointer;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -47,11 +61,18 @@ ion-header {
         max-width: 100px;
     }
     .header-content .searchbar-container {
-        padding-top: 70px;
+        margin-top: 70px;
         width: 100%;
-        margin: auto;
+        /* margin: auto; */
     }
     ion-header {
         margin-bottom: 8rem;
+    }
+    .searchbar-container {
+        right: 0;
+    }
+    .sign-out {
+        margin-top: -3rem;
+        margin-left: auto;
     }
 }
