@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import api from '../api'
@@ -20,15 +20,12 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
     const [timeFrame, setTimeFrame] = useState<string>('D')
     const { symbol } = useParams<ParamTypes>()
 
-    const fetchStockData = useCallback(async () => {
+    const fetchStockData = async () => {
         const res = await api.get(`/stock/${symbol}`)
         return res.data
-    }, [])
+    }
 
-    const { data, isLoading, isError } = useQuery('weekly', fetchStockData, {
-        retry: false,
-        staleTime: Infinity,
-    })
+    const { data, isLoading, isError } = useQuery(['stock', { symbol } ], fetchStockData)
 
     if (isLoading) {
         return <h3>Loading...</h3>
@@ -121,7 +118,6 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
         ).toFixed(2)
         const color = isPositive ? 'tertiary' : 'secondary'
 
-        const watchlist: Array<string> = ['AAPL', 'ABNB', 'TSLA', 'GM']
         return (
             <>
                 <h3 className="company-name">
@@ -129,7 +125,6 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     <span className="company-symbol">{symbol}</span>
                 </h3>
                 <WatchlistToggle
-                    inWatchlist={ watchlist.includes(symbol)}
                     symbol={ symbol }
                     prediction={ isPositive }
                 />
