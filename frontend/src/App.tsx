@@ -35,7 +35,6 @@ const App: React.FC<AppProps> = (props) => {
         if (state.token !== null && state.watchlist === null)
             props.loadWatchlist()
     }, [state.token])
-    console.log(state)
     return (
         <IonApp>
             <IonReactRouter>
