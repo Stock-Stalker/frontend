@@ -55,7 +55,11 @@ const App: React.FC<AppProps> = (props) => {
                         <Stock />
                     </Route>
                     <Route exact path="/">
-                        <Redirect to="/welcome" />
+                        { state.token ?
+                            <Redirect to="/dashboard" />
+                            :
+                            <Redirect to="/welcome" />
+                        }
                     </Route>
                 </IonRouterOutlet>
             </IonReactRouter>
