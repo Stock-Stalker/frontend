@@ -4,7 +4,7 @@ import Watchlist from '../components/Watchlist'
 
 const Welcome: React.FC = () => {
     return (
-        <Layout>
+        <Layout searchbar={true}>
             <div className="popular-stocks">
             </div>
             <Watchlist />
