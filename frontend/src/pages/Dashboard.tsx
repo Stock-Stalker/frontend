@@ -42,6 +42,12 @@ const Dashboard: React.FC = () => {
                         price=" 188.79"
                         prediction={1}
                     />
+                    <StockEllipse
+                        companyName="Airbnb"
+                        symbol="ABNB"
+                        price=" 188.79"
+                        prediction={1}
+                    />
                 </div>
                 <div className="dashboard-watchlist">
                     <Watchlist />
