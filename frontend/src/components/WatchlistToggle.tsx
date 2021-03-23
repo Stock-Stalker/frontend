@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { useSelector, connect } from 'react-redux';
 import { IonIcon } from '@ionic/react'
 import { star, starOutline } from 'ionicons/icons'
@@ -14,6 +15,7 @@ interface WatchlistToggleProps {
 }
 
 const WatchlistToggle: React.FC<WatchlistToggleProps> = (props) => {
+    const history = useHistory()
     const { symbol, prediction } = props
     const watchlist = useSelector((state: AppState) => state.watchlist ? state.watchlist.map(item => item.symbol) : [])
     const color = prediction ? 'tertiary' : 'secondary'
@@ -25,7 +27,7 @@ const WatchlistToggle: React.FC<WatchlistToggleProps> = (props) => {
             })
             props.setWatchlist(res.data)
         } catch (error) {
-            console.error(error)
+            history.push('/signup');
         }
     }
 
