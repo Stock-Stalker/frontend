@@ -25,7 +25,7 @@ const PopularStocks: React.FC = () => {
                             key={ Object.keys(stock)[0] }
                             companyName=""
                             symbol={ Object.keys(stock)[0] }
-                            price={ stock[Object.keys(stock)[0]] }
+                            currentPrice={ stock[Object.keys(stock)[0]] }
                             prediction={1}
                         />
                     )

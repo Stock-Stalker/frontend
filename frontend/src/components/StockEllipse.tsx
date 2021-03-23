@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { Stock } from '../types'
 const StockEllipse: React.FC<Stock> = ({
     symbol,
-    price,
+    currentPrice,
     prediction,
 }) => {
     const color = prediction ? 'tertiary' : 'secondary'
@@ -14,7 +14,7 @@ const StockEllipse: React.FC<Stock> = ({
             to={`/stock/${ symbol }`}
         >
             <h4 className={`text-${color}`}>{ symbol }</h4>
-            <p className={`text-${color}`}>${price}</p>
+            <p className={`text-${color}`}>${ currentPrice }</p>
             <div className={`bg-desat-${color} pill`}>
                 <h5 className={`text-${color}`}>
                     {prediction ? 'UP' : 'DOWN'}

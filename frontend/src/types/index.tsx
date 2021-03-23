@@ -2,7 +2,7 @@ export interface Stock {
     _id?: string
     companyName: string
     symbol: string
-    price: string
+    currentPrice: string
     prediction: number
 }
 

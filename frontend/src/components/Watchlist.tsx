@@ -21,7 +21,7 @@ const Watchlist: React.FC = () => {
                             <WatchlistItem
                                 key={ stock.symbol }
                                 symbol={ stock.symbol }
-                                price={ stock.price }
+                                price={ stock.currentPrice }
                                 prediction={ stock.prediction }
                             />
                         )
