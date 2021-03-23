@@ -9,7 +9,11 @@ const PopularStocks: React.FC = () => {
         return res.data
     }
 
-    const { data, isLoading, isError } = useQuery('popularStock', fetchStockData)
+    const { data, isLoading, isError } = useQuery('popularStock', fetchStockData, {
+            refetchOnWindowFocus: false,
+            enabled: false // needed to handle refetchs manually
+        }
+    )
 
     if (isLoading) {
         return <h3>Loading...</h3>
