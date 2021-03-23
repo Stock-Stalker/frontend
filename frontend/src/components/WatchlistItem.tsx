@@ -6,8 +6,8 @@ import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
 interface WatchlistItemDetails {
     symbol: string
-    price: number
-    prediction: boolean
+    price: string
+    prediction: number
 }
 
 const WatchlistItem: React.FC<WatchlistItemDetails> = ({

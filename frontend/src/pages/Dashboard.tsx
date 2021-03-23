@@ -1,17 +1,13 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
 import { useSelector, connect } from 'react-redux';
+import { AppState } from '../types'
 import Layout from '../components/Layout'
 import Watchlist from '../components/Watchlist'
 import './Dashboard.css'
 
-interface DashboardState {
-    token: string
-    watchlist: Array<string>
-}
-
 const Dashboard: React.FC = () => {
-    const { token } = useSelector((state: DashboardState) => state)
+    const { token } = useSelector((state: AppState) => state)
 
     if (!token) {
         return <Redirect to="/signin" />
@@ -29,7 +25,7 @@ const Dashboard: React.FC = () => {
     )
 }
 
-const mapStateToProps = (state: DashboardState) => {
+const mapStateToProps = (state: AppState) => {
     return {
         token: state.token,
     };

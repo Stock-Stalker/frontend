@@ -5,13 +5,15 @@ import { IonReactRouter } from '@ionic/react-router'
 import { useSelector, connect } from 'react-redux';
 import Welcome from './pages/Welcome'
 import Dashboard from './pages/Dashboard'
-import Stock from './pages/Stock'
+import StockComponent from './pages/Stock'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
 // import RedirectToWelcome from './pages/Redirect/RedirectToWelcome'
 // Redux
 import { loadWatchlist } from './actions/watchlist'
 
+// Types
+import { AppState } from './types'
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css'
 /* Basic CSS for apps built with Ionic */
@@ -25,16 +27,6 @@ interface AppProps {
     loadWatchlist: () => void
 }
 
-interface StockType {
-    id: string
-    symbol: string
-    companyName: string
-}
-
-interface AppState {
-    token: string
-    watchlist: Array<StockType>
-}
 const App: React.FC<AppProps> = (props) => {
     const state: AppState = useSelector((state: AppState) => state)
     useEffect(() => {
@@ -50,7 +42,7 @@ const App: React.FC<AppProps> = (props) => {
                     <Route exact path="/signup" component={ SignUp } />
                     <Route exact path="/welcome" component={ Welcome } />
                     <Route exact path="/dashboard" component={ Dashboard } />
-                    <Route exact path="/stock/:symbol" component={ Stock } />
+                    <Route exact path="/stock/:symbol" component={ StockComponent } />
                     <Route exact path="/">
                         { state.token ?
                             <Redirect to="/dashboard" />

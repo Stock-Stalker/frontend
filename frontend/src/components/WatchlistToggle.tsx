@@ -3,19 +3,9 @@ import { useSelector, connect } from 'react-redux';
 import { IonIcon } from '@ionic/react'
 import { star, starOutline } from 'ionicons/icons'
 import api from '../api'
+import { AppState, Stock } from '../types'
 import { setWatchlist } from '../actions/watchlist'
 import './WatchlistToggle.css'
-
-interface WatchlistToggleState {
-    token: string
-    watchlist: Stock[]
-}
-
-interface Stock {
-    _id: string
-    symbol: string
-    companyName: string
-}
 
 interface WatchlistToggleProps {
     setWatchlist: (watchlist: Stock[]) => void
@@ -25,7 +15,7 @@ interface WatchlistToggleProps {
 
 const WatchlistToggle: React.FC<WatchlistToggleProps> = (props) => {
     const { symbol, prediction } = props
-    const watchlist = useSelector((state: WatchlistToggleState) => state.watchlist ? state.watchlist.map(item => item.symbol) : [])
+    const watchlist = useSelector((state: AppState) => state.watchlist ? state.watchlist.map(item => item.symbol) : [])
     const color = prediction ? 'tertiary' : 'secondary'
 
     async function toggleWatchlist() {

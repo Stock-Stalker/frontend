@@ -1,6 +1,7 @@
 import React from 'react'
 import { IonPage, IonContent, IonHeader } from '@ionic/react'
 import { useSelector } from 'react-redux';
+import { AppState } from '../types'
 import SearchBar from './Searchbar'
 import SignOut from './SignOut'
 import logo from '../assets/logo-tertiary.svg'
@@ -9,10 +10,7 @@ import './Layout.css'
 interface LayoutProps {
     searchbar?: boolean
 }
-interface AppState {
-    token: string
-    watchlist: Array<string>
-}
+
 const Layout: React.FC<LayoutProps> = (props) => {
     const token: string = useSelector((state: AppState) => state.token)
 
