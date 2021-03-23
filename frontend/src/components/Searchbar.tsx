@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../api'
-import { Stock } from '../types'
+// import { Stock } from '../types'
 import { IonSearchbar } from '@ionic/react'
 import './Searchbar.css'
 
