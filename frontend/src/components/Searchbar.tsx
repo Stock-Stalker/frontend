@@ -7,7 +7,7 @@ import './Searchbar.css'
 
 const SearchBar: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('')
-    const [stockList, setStockList] = useState<Stock[]>([])
+    const [stockList, setStockList] = useState<any[]>([])
 
     async function loadStockList() {
         try {
@@ -21,7 +21,6 @@ const SearchBar: React.FC = () => {
     useEffect(() => {
         loadStockList()
     }, [])
-
     const filteredStocks =
         stockList &&
         stockList.filter((stock) => {
