@@ -25,7 +25,7 @@
     flex-direction: column;
     position: absolute;
     z-index: 1;
-    right: 6rem;
+    left: 15rem;
 }
 
 ion-header {
@@ -95,11 +95,16 @@ ion-header {
         width: 100%;
         /* margin: auto; */
     }
+    .header-buttons {
+        margin-top: -60px;
+        margin-left: auto;
+    }
     ion-header {
         margin-bottom: 8rem;
     }
     .searchbar-container {
-        right: 0;
+        margin: auto;
+        left: 0;
     }
     .sign-out {
         margin-top: -3rem;
