@@ -1,5 +1,5 @@
 export interface Stock {
-    _id: string
+    _id?: string
     companyName: string
     symbol: string
     price: string
