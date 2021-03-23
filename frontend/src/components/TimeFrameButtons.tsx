@@ -3,7 +3,7 @@ import './TimeFrameButtons.css'
 import TimeFrameButton from './TimeFrameButton'
 
 interface TimeFrameButtonsProps {
-    prediction: boolean
+    prediction: number
     selectedTimeFrame: string
     toggleTimeFrame: (t: string) => void
     timeFrames: Array<string>

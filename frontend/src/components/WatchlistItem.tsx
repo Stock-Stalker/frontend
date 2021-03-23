@@ -15,7 +15,7 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
     price,
     prediction,
 }) => {
-    const color = prediction ? 'tertiary' : 'secondary'
+    const color = prediction === 1 ? 'tertiary' : prediction === 0 ? 'secondary' : 'light'
 
     return (
         <Link to={`/stock/${symbol}`} key={symbol}>
@@ -26,7 +26,7 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
                     <span className={`text-${color}`}>
                         <img
                             width="30px"
-                            src={prediction ? arrowUp : arrowDown}
+                            src={prediction === 0 ? arrowDown : arrowUp}
                             alt="StockStalker Arrow"
                         />
                     </span>

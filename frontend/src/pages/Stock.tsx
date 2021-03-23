@@ -6,7 +6,7 @@ import Watchlist from '../components/Watchlist'
 import './Stock.css'
 
 const Stock: React.FC = () => {
-    const prediction = false
+    const prediction = 2
     return (
         <Layout searchbar={true}>
             <div className="stock-container">

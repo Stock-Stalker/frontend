@@ -9,7 +9,7 @@ import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
 interface Prediction {
-    prediction: boolean
+    prediction: number
 }
 
 interface ParamTypes {
@@ -37,6 +37,7 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
         const {
             companyName,
             currentPrice,
+            prediction,
             historicalData,
             symbol,
         } = data.stockData
@@ -126,28 +127,28 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                 </h3>
                 <WatchlistToggle
                     symbol={ symbol }
-                    prediction={ isPositive }
+                    prediction={ prediction }
                 />
                 <div className="glass-primary card card-stock">
                     <h3>$ {parseInt(currentPrice).toFixed(2)}</h3>
                     <span className={`text-${color}`}>
                         <img
                             width="30px"
-                            src={isPositive ? arrowUp : arrowDown}
+                            src={prediction === 0 ? arrowDown : arrowUp}
                             alt="StockStalker Arrow"
                         />{' '}
                         $ {changeSinceOpen} ({changePercentage}%)
                     </span>
                     <div className={`chart glass-${color}`}>
                         <LineGraph
-                            prediction={isPositive}
+                            prediction={prediction}
                             graphData={graphData}
                             baseline={baseline}
                             timeFrame={timeFrame}
                         />
                     </div>
                     <TimeFrameButtons
-                        prediction={isPositive}
+                        prediction={prediction}
                         selectedTimeFrame={timeFrame}
                         timeFrames={timeFrames}
                         toggleTimeFrame={(t: string) => setTimeFrame(t)}

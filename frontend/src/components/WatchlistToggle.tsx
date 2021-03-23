@@ -11,14 +11,14 @@ import './WatchlistToggle.css'
 interface WatchlistToggleProps {
     setWatchlist: (watchlist: Stock[]) => void
     symbol: string
-    prediction: boolean
+    prediction: number
 }
 
 const WatchlistToggle: React.FC<WatchlistToggleProps> = (props) => {
     const history = useHistory()
     const { symbol, prediction } = props
     const watchlist = useSelector((state: AppState) => state.watchlist ? state.watchlist.map(item => item.symbol) : [])
-    const color = prediction ? 'tertiary' : 'secondary'
+    const color = prediction === 1 ? 'tertiary' : prediction === 0 ? 'secondary' : 'light'
 
     async function toggleWatchlist() {
         try {

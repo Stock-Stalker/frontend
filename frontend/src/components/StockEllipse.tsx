@@ -6,7 +6,7 @@ const StockEllipse: React.FC<Stock> = ({
     currentPrice,
     prediction,
 }) => {
-    const color = prediction ? 'tertiary' : 'secondary'
+    const color = prediction === 1 ? 'tertiary' : prediction === 0 ? 'secondary' : 'light'
 
     return (
         <Link
@@ -17,7 +17,7 @@ const StockEllipse: React.FC<Stock> = ({
             <p className={`text-${color}`}>${ currentPrice }</p>
             <div className={`bg-desat-${color} pill`}>
                 <h5 className={`text-${color}`}>
-                    {prediction ? 'UP' : 'DOWN'}
+                    {prediction === 1 ? 'UP' : prediction === 0 ? 'DOWN' : 'HOLD' }
                 </h5>
             </div>
         </Link>
