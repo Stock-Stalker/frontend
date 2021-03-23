@@ -1,9 +1,10 @@
-import React, { useState, useCallback } from 'react'
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import api from '../api'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
+import WatchlistToggle from '../components/WatchlistToggle'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
@@ -19,15 +20,12 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
     const [timeFrame, setTimeFrame] = useState<string>('D')
     const { symbol } = useParams<ParamTypes>()
 
-    const fetchStockData = useCallback(async () => {
+    const fetchStockData = async () => {
         const res = await api.get(`/stock/${symbol}`)
         return res.data
-    }, [])
+    }
 
-    const { data, isLoading, isError } = useQuery('weekly', fetchStockData, {
-        retry: false,
-        staleTime: Infinity,
-    })
+    const { data, isLoading, isError } = useQuery(['stock', { symbol } ], fetchStockData)
 
     if (isLoading) {
         return <h3>Loading...</h3>
@@ -126,6 +124,10 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     {companyName.split('-')[0]}{' '}
                     <span className="company-symbol">{symbol}</span>
                 </h3>
+                <WatchlistToggle
+                    symbol={ symbol }
+                    prediction={ isPositive }
+                />
                 <div className="glass-primary card card-stock">
                     <h3>$ {parseInt(currentPrice).toFixed(2)}</h3>
                     <span className={`text-${color}`}>

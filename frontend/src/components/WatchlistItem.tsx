@@ -1,5 +1,5 @@
 import React from 'react'
-import { IonRouterLink } from '@ionic/react'
+import { Link } from 'react-router-dom'
 import './WatchlistItem.css'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
@@ -18,7 +18,7 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
     const color = prediction ? 'tertiary' : 'secondary'
 
     return (
-        <IonRouterLink href={`/stock/${symbol}`} key={symbol}>
+        <Link to={`/stock/${symbol}`} key={symbol}>
             <div className={`watchlist-item text-${color}`}>
                 <h5>{symbol}</h5>
                 <div className="watchlist-item-details">
@@ -32,7 +32,7 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
                     </span>
                 </div>
             </div>
-        </IonRouterLink>
+        </Link>
     )
 }
 

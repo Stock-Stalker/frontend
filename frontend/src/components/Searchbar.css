@@ -41,7 +41,7 @@ ion-searchbar ion-icon {
     margin-top: 10px;
     margin-bottom: -200px;
     padding-bottom: 1rem;
-    min-height: 200px;
+    /* min-height: 200px; */
     max-height: 200px;
     border-radius: 50px;
     overflow-y: scroll;

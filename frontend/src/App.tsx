@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
-import { Redirect, Route } from 'react-router-dom'
-import { IonApp, IonRouterOutlet } from '@ionic/react'
+import { Route, Redirect, Switch } from 'react-router-dom'
+import { IonApp } from '@ionic/react'
 import { IonReactRouter } from '@ionic/react-router'
 import { useSelector, connect } from 'react-redux';
 import Welcome from './pages/Welcome'
@@ -8,7 +8,7 @@ import Dashboard from './pages/Dashboard'
 import Stock from './pages/Stock'
 import SignIn from './pages/SignIn'
 import SignUp from './pages/SignUp'
-
+// import RedirectToWelcome from './pages/Redirect/RedirectToWelcome'
 // Redux
 import { loadWatchlist } from './actions/watchlist'
 
@@ -25,35 +25,32 @@ interface AppProps {
     loadWatchlist: () => void
 }
 
+interface StockType {
+    id: string
+    symbol: string
+    companyName: string
+}
+
 interface AppState {
     token: string
-    watchlist: Array<string>
+    watchlist: Array<StockType>
 }
 const App: React.FC<AppProps> = (props) => {
     const state: AppState = useSelector((state: AppState) => state)
     useEffect(() => {
-        if (state.token !== null && state.watchlist === null)
+        if (state.token !== null) {
             props.loadWatchlist()
+        }
     }, [state.token])
     return (
         <IonApp>
             <IonReactRouter>
-                <IonRouterOutlet>
-                    <Route exact path="/signin">
-                        <SignIn />
-                    </Route>
-                    <Route exact path="/signup">
-                        <SignUp />
-                    </Route>
-                    <Route exact path="/welcome">
-                        <Welcome />
-                    </Route>
-                    <Route exact path="/dashboard">
-                        <Dashboard />
-                    </Route>
-                    <Route exact path="/stock/:symbol">
-                        <Stock />
-                    </Route>
+                <Switch>
+                    <Route exact path="/signin" component={ SignIn } />
+                    <Route exact path="/signup" component={ SignUp } />
+                    <Route exact path="/welcome" component={ Welcome } />
+                    <Route exact path="/dashboard" component={ Dashboard } />
+                    <Route exact path="/stock/:symbol" component={ Stock } />
                     <Route exact path="/">
                         { state.token ?
                             <Redirect to="/dashboard" />
@@ -61,7 +58,7 @@ const App: React.FC<AppProps> = (props) => {
                             <Redirect to="/welcome" />
                         }
                     </Route>
-                </IonRouterOutlet>
+                </Switch>
             </IonReactRouter>
         </IonApp>
     )

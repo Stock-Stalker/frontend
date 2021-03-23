@@ -16,5 +16,6 @@ const setToken = () => {
 };
 
 store.subscribe(setToken)
+// api.defaults.headers.common.Authorization = 'Bearer ' + localStorage.getItem('token')
 
 export default api

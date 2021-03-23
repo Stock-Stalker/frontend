@@ -6,7 +6,7 @@ interface Stock {
     companyName: string
 }
 
-export const setWatchlist = (watchlist: Array<Stock>) => {
+export const setWatchlist = (watchlist: Stock[]) => {
     return {
         type: 'SET_WATCHLIST',
         payload: watchlist

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import api from '../api'
-import { IonSearchbar, IonRouterLink } from '@ionic/react'
+import { IonSearchbar } from '@ionic/react'
 import './Searchbar.css'
 
 interface Stock {
@@ -9,7 +10,7 @@ interface Stock {
 }
 const SearchBar: React.FC = () => {
     const [searchTerm, setSearchTerm] = useState<string>('')
-    const [stockList, setStockList] = useState<Array<Stock>>([])
+    const [stockList, setStockList] = useState<Stock[]>([])
 
     async function loadStockList() {
         try {
@@ -46,9 +47,11 @@ const SearchBar: React.FC = () => {
                 <div className="search-results glass-input-primary">
                     {filteredStocks.length > 0 ? (
                         filteredStocks.map((stock, index) => (
-                            <IonRouterLink
-                                href={'/stock/' + stock.symbol}
-                                key={stock.symbol + index.toString()}>
+                            <Link
+                                to={'/stock/' + stock.symbol}
+                                key={stock.symbol + index.toString()}
+                                onClick={(e) => setSearchTerm('')}
+                            >
                                 <div className="result">
                                     <span>
                                         {stock.symbol +
@@ -56,7 +59,7 @@ const SearchBar: React.FC = () => {
                                             stock.companyName.split('-')[0]}
                                     </span>
                                 </div>
-                            </IonRouterLink>
+                            </Link>
                         ))
                     ) : (
                         <div className="no-result">

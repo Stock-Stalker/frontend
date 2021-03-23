@@ -10,7 +10,7 @@ interface WatchlistState {
 
 const Watchlist: React.FC = () => {
     const { watchlist } = useSelector((state: WatchlistState) => state)
-
+    console.log(watchlist)
     return (
         <div className="watchlist-container">
             <div className="watchlist-header">

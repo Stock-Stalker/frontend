@@ -1,0 +1,14 @@
+.watchlist-toggle {
+    float: right;
+    margin-top: -5rem;
+    margin-right: 1rem;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.watchlist-toggle:hover {
+    cursor: pointer;
+}
