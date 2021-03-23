@@ -4,7 +4,7 @@ import './WelcomeEllipse.css'
 
 const WelcomeEllipse: React.FC = () => {
     return (
-        <div className="container">
+        <div className="welcome-container">
             <div className="glass-primary ellipse welcome">
                 <div className="welcome-aspect-ratio" />
                 <div className="welcome-content">
