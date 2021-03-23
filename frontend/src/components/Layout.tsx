@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 import { IonPage, IonContent, IonHeader } from '@ionic/react'
 import { useSelector } from 'react-redux';
 import { AppState } from '../types'
@@ -12,6 +13,7 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = (props) => {
+    const history = useHistory()
     const token: string = useSelector((state: AppState) => state.token)
 
     return (
@@ -29,7 +31,24 @@ const Layout: React.FC<LayoutProps> = (props) => {
                             <SearchBar />
                         </div>
                     )}
-                    { token && <SignOut /> }
+                    { token ?
+                        <SignOut />
+                        :
+                        <div className="header-buttons">
+                            <button
+                                className="sign-in text-tertiary"
+                                onClick={() => history.push('/signin') }
+                            >
+                                Sign in
+                            </button>
+                            <button
+                                className="sign-up"
+                                onClick={() => history.push('/signup') }
+                            >
+                                Sign up
+                            </button>
+                        </div>
+                    }
                 </div>
             </IonHeader>
             <IonContent fullscreen>

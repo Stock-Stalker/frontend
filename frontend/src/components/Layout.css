@@ -46,6 +46,36 @@ ion-header {
     cursor: pointer;
 }
 
+.sign-in {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--ion-color-tertiary);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.sign-in:hover {
+    cursor: pointer;
+}
+
+.sign-up {
+    background: var(--ion-color-tertiary);
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 50px;
+    color: var(--ion-color-dark);
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+}
+
+.sign-up:hover {
+    cursor: pointer;
+}
+
 @media only screen and (min-width: 1200px) {
     .searchbar-container {
         right: 20vw;
