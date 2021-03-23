@@ -45,6 +45,14 @@ a {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.glass-light {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-light);
+    -webkit-box-shadow: var(--glass-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .bg-desat-primary {
     background: rgba(var(--ion-color-primary-rgb), 0.4);
 }
@@ -56,6 +64,11 @@ a {
 .bg-desat-tertiary {
     background: rgba(var(--ion-color-tertiary-rgb), 0.4);
 }
+
+.bg-desat-light {
+    background: rgba(var(--ion-color-light-rgb), 0.4);
+}
+
 
 .glass-input-primary {
     background: rgba(255, 255, 255, 0.01);
@@ -81,6 +94,14 @@ a {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.glass-input-light {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-light);
+    -webkit-box-shadow: var(--glass-input-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .neon-primary {
     text-shadow: var(--neon-primary);
     -webkit-text-shadow: var(--neon-primary);
@@ -98,6 +119,13 @@ a {
 .neon-tertiary {
     text-shadow: var(--neon-tertiary);
     -webkit-text-shadow: var(--neon-tertiary);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
+.neon-light {
+    text-shadow: var(--neon-light);
+    -webkit-text-shadow: var(--neon-light);
     backdrop-filter: blur(1px);
     -webkit-backdrop-filter: blur(1px);
 }
