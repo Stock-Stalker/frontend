@@ -3,8 +3,8 @@ import { Redirect } from 'react-router-dom'
 import { useSelector, connect } from 'react-redux';
 import { AppState } from '../types'
 import Layout from '../components/Layout'
+import PopularStocks from '../components/PopularStocks'
 import Watchlist from '../components/Watchlist'
-import StockEllipse from '../components/StockEllipse'
 import './Dashboard.css'
 
 const Dashboard: React.FC = () => {
@@ -16,39 +16,7 @@ const Dashboard: React.FC = () => {
     return (
         <Layout searchbar={true}>
             <div className="dashboard-container">
-                <div className="popular-stocks">
-                    <h2>Popular Stocks</h2>
-                    <StockEllipse
-                        companyName="Airbnb"
-                        symbol="ABNB"
-                        price=" 188.79"
-                        prediction={1}
-                    />
-                    <StockEllipse
-                        companyName="Airbnb"
-                        symbol="ABNB"
-                        price=" 188.79"
-                        prediction={1}
-                    />
-                    <StockEllipse
-                        companyName="Airbnb"
-                        symbol="ABNB"
-                        price=" 188.79"
-                        prediction={1}
-                    />
-                    <StockEllipse
-                        companyName="Airbnb"
-                        symbol="ABNB"
-                        price=" 188.79"
-                        prediction={1}
-                    />
-                    <StockEllipse
-                        companyName="Airbnb"
-                        symbol="ABNB"
-                        price=" 188.79"
-                        prediction={1}
-                    />
-                </div>
+                <PopularStocks />
                 <div className="dashboard-watchlist">
                     <Watchlist />
                 </div>
