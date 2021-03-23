@@ -20,7 +20,6 @@ const PopularStocks: React.FC = () => {
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
     } else {
-        console.log(data)
         return (
             <div className="popular-stocks">
                 <h2>Popular Stocks</h2>

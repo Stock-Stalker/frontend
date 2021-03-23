@@ -142,6 +142,10 @@ a {
     color: var(--ion-color-tertiary);
 }
 
+.text-light {
+    color: var(--ion-color-light);
+}
+
 .uppercase {
     text-transform: uppercase;
 }
