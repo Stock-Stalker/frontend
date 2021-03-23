@@ -22,7 +22,7 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
             <div className={`watchlist-item text-${color}`}>
                 <h5>{symbol}</h5>
                 <div className="watchlist-item-details">
-                    <p className={`text-${color}`}>${price}</p>
+                    <p className={`text-${color}`}>${ parseFloat(price).toFixed(2) }</p>
                     <span className={`text-${color}`}>
                         <img
                             width="30px"
