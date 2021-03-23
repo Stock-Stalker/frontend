@@ -3,18 +3,17 @@ import './TimeFrameButton.css'
 
 interface TimeFrame {
     timeFrame: string
-    prediction: number
+    color: string
     selectedTimeFrame: string
     toggleTimeFrame: (t: string) => void
 }
 
 const TimeFrameButton: React.FC<TimeFrame> = ({
-    prediction,
+    color,
     timeFrame,
     selectedTimeFrame,
     toggleTimeFrame,
 }) => {
-    const color = prediction === 1 ? 'tertiary' : prediction === 0 ? 'secondary' : 'light'
 
     return (
         <div

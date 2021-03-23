@@ -2,20 +2,19 @@ import React from 'react'
 import { Line } from 'react-chartjs-2'
 
 interface Prediction {
-    prediction: number
+    isPositive: boolean
     timeFrame: string
     graphData: Array<String>
     baseline: Array<String>
 }
 
 const LineGraph: React.FC<Prediction> = ({
-    prediction,
+    isPositive,
     timeFrame,
     graphData,
     baseline,
 }) => {
-    const color = prediction === 1 ? '#7DFAFF' : prediction === 0 ? '#FFAF5C' : '#DBDBDB'
-
+    const color = isPositive ? '#7DFAFF' : '#FFAF5C'
     return (
         <Line
             data={{

@@ -1,31 +1,29 @@
 import React, { useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { useQuery } from 'react-query'
-import api from '../api'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
 import WatchlistToggle from '../components/WatchlistToggle'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
-interface Prediction {
+interface StockInfo {
+    companyName: string
+    currentPrice: string
     prediction: number
-}
-
-interface ParamTypes {
+    historicalData: Array<any>
     symbol: string
+    isLoading: boolean
+    isError: boolean
 }
-
-const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
+const StockInfoChart: React.FC<StockInfo> = ({
+    companyName,
+    currentPrice,
+    prediction,
+    historicalData,
+    symbol,
+    isLoading,
+    isError
+}) => {
     const [timeFrame, setTimeFrame] = useState<string>('D')
-    const { symbol } = useParams<ParamTypes>()
-
-    const fetchStockData = async () => {
-        const res = await api.get(`/stock/${symbol}`)
-        return res.data
-    }
-
-    const { data, isLoading, isError } = useQuery(['stock', { symbol } ], fetchStockData)
 
     if (isLoading) {
         return <h3>Loading...</h3>
@@ -33,14 +31,6 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
         return <h3>Something Went Wrong</h3>
     } else {
         const timeFrames = ['D']
-
-        const {
-            companyName,
-            currentPrice,
-            prediction,
-            historicalData,
-            symbol,
-        } = data.stockData
 
         const getTimeFrames = () => {
             switch (true) {
@@ -134,21 +124,21 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     <span className={`text-${color}`}>
                         <img
                             width="30px"
-                            src={prediction === 0 ? arrowDown : arrowUp}
+                            src={isPositive ? arrowUp : arrowDown}
                             alt="StockStalker Arrow"
                         />{' '}
                         $ {changeSinceOpen} ({changePercentage}%)
                     </span>
                     <div className={`chart glass-${color}`}>
                         <LineGraph
-                            prediction={prediction}
+                            isPositive={isPositive}
                             graphData={graphData}
                             baseline={baseline}
                             timeFrame={timeFrame}
                         />
                     </div>
                     <TimeFrameButtons
-                        prediction={prediction}
+                        color={color}
                         selectedTimeFrame={timeFrame}
                         timeFrames={timeFrames}
                         toggleTimeFrame={(t: string) => setTimeFrame(t)}
