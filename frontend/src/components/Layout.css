@@ -19,13 +19,13 @@
 .searchbar-container {
     margin-top: 0.5rem;
     width: 50%;
-    height: 350px;
+    max-height: 350px;
     margin: auto;
     display: flex;
     flex-direction: column;
     position: absolute;
     z-index: 1;
-    right: 6rem;
+    left: 15rem;
 }
 
 ion-header {
@@ -43,6 +43,36 @@ ion-header {
 }
 
 .sign-out:hover {
+    cursor: pointer;
+}
+
+.sign-in {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--ion-color-tertiary);
+    padding: 0.5rem 1rem;
+    margin-right: 1rem;
+}
+
+.sign-in:hover {
+    cursor: pointer;
+}
+
+.sign-up {
+    background: var(--ion-color-tertiary);
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    height: 50px;
+    color: var(--ion-color-dark);
+    padding: 1rem 1rem;
+    margin-right: 1rem;
+}
+
+.sign-up:hover {
     cursor: pointer;
 }
 
@@ -65,11 +95,16 @@ ion-header {
         width: 100%;
         /* margin: auto; */
     }
+    .header-buttons {
+        margin-top: -60px;
+        margin-left: auto;
+    }
     ion-header {
         margin-bottom: 8rem;
     }
     .searchbar-container {
-        right: 0;
+        margin: auto;
+        left: 0;
     }
     .sign-out {
         margin-top: -3rem;

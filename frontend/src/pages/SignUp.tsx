@@ -30,7 +30,7 @@ const SignUp: React.FC<Auth> = (props) => {
                 })
                 localStorage.setItem('token', res.data.token);
                 props.setToken(res.data.token)
-                history.push('/welcome')
+                history.push('/dashboard')
             } catch (error) {
                 setErrorMessage('Something went wrong')
             }

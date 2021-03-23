@@ -3,14 +3,14 @@ import './TimeFrameButtons.css'
 import TimeFrameButton from './TimeFrameButton'
 
 interface TimeFrameButtonsProps {
-    prediction: boolean
+    color: string
     selectedTimeFrame: string
     toggleTimeFrame: (t: string) => void
     timeFrames: Array<string>
 }
 
 const TimeFrameButtons: React.FC<TimeFrameButtonsProps> = ({
-    prediction,
+    color,
     selectedTimeFrame,
     toggleTimeFrame,
     timeFrames,
@@ -20,7 +20,7 @@ const TimeFrameButtons: React.FC<TimeFrameButtonsProps> = ({
             {timeFrames.map((timeFrame: string) => (
                 <TimeFrameButton
                     key={timeFrame}
-                    prediction={prediction}
+                    color={color}
                     timeFrame={timeFrame}
                     selectedTimeFrame={selectedTimeFrame}
                     toggleTimeFrame={toggleTimeFrame}

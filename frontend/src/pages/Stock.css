@@ -73,9 +73,10 @@
     min-height: 29vh;
     margin-top: 0.5rem;
     border-radius: 20px;
+    overflow: hidden;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1200px) {
     .col-1-2 {
         grid-column: 1 / 4;
         grid-row: 1 / 2;
@@ -104,5 +105,9 @@
 
     .ellipse-prediction {
         grid-row: 1 / 1;
+    }
+
+    .chart {
+        max-width: 70vw;
     }
 }

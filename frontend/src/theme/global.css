@@ -8,6 +8,10 @@ h6 {
     font-family: var(--ion-font-family) !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .ellipse {
     border-radius: 200%;
 }
@@ -41,6 +45,14 @@ h6 {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.glass-light {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-light);
+    -webkit-box-shadow: var(--glass-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .bg-desat-primary {
     background: rgba(var(--ion-color-primary-rgb), 0.4);
 }
@@ -52,6 +64,11 @@ h6 {
 .bg-desat-tertiary {
     background: rgba(var(--ion-color-tertiary-rgb), 0.4);
 }
+
+.bg-desat-light {
+    background: rgba(var(--ion-color-light-rgb), 0.4);
+}
+
 
 .glass-input-primary {
     background: rgba(255, 255, 255, 0.01);
@@ -77,6 +94,14 @@ h6 {
     -webkit-backdrop-filter: blur(10px);
 }
 
+.glass-input-light {
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: var(--glass-input-light);
+    -webkit-box-shadow: var(--glass-input-light);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 .neon-primary {
     text-shadow: var(--neon-primary);
     -webkit-text-shadow: var(--neon-primary);
@@ -98,6 +123,13 @@ h6 {
     -webkit-backdrop-filter: blur(1px);
 }
 
+.neon-light {
+    text-shadow: var(--neon-light);
+    -webkit-text-shadow: var(--neon-light);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
+}
+
 .text-primary {
     color: var(--ion-color-primary);
 }
@@ -110,9 +142,51 @@ h6 {
     color: var(--ion-color-tertiary);
 }
 
+.text-light {
+    color: var(--ion-color-light);
+}
+
 .uppercase {
     text-transform: uppercase;
 }
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid var(--ion-color-light);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--ion-color-light) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 
 @media only screen and (min-width: 900px) {
     h1 {

@@ -1,12 +1,8 @@
 import api from '../api';
-// import axios from 'axios';
-interface Stock {
-    _id: string
-    symbol: string
-    companyName: string
-}
+import { Stock } from '../types'
 
-export const setWatchlist = (watchlist: Array<Stock>) => {
+
+export const setWatchlist = (watchlist: Stock[]) => {
     return {
         type: 'SET_WATCHLIST',
         payload: watchlist

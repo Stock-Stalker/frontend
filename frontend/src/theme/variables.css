@@ -114,6 +114,13 @@ http://ionicframework.com/docs/theming/ */
         inset 0px 4px 18px 0px rgba(var(--ion-color-tertiary-rgb), 0.3),
         inset 0px 1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.2);
 
+    --glass-light: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5),
+        inset 0px 1px 4px 0px rgba(var(--ion-color-light-rgb), 0.3),
+        inset 0px -82px 68px -64px rgba(var(--ion-color-light-rgb), 0.3),
+        inset 0px 98px 100px -48px rgba(var(--ion-color-light-rgb), 0.3),
+        inset 0px 4px 18px 0px rgba(var(--ion-color-light-rgb), 0.3),
+        inset 0px 1px 40px 0px rgba(var(--ion-color-light-rgb), 0.2);
+
     --glass-input-primary: inset 0px -4px 4px 0px rgba(var(--ion-color-primary-rgb), 0.1),
         inset 0px 82px 68px -64px rgba(var(--ion-color-primary-rgb), 0.1),
         inset 0px -98px 100px -48px rgba(var(--ion-color-primary-rgb), 0.1),
@@ -132,6 +139,12 @@ http://ionicframework.com/docs/theming/ */
         inset 0px -4px 18px 0px rgba(var(--ion-color-tertiary-rgb), 0.1),
         inset 0px -1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.05));
 
+    --glass-input-light: inset 0px -4px 4px 0px rgba(var(--ion-color-light-rgb), 0.1),
+        inset 0px 82px 68px -64px rgba(var(--ion-color-light-rgb), 0.1),
+        inset 0px -98px 100px -48px rgba(var(--ion-color-light-rgb), 0.1),
+        inset 0px -4px 18px 0px rgba(var(--ion-color-light-rgb), 0.1),
+        inset 0px -1px 40px 0px rgba(var(--ion-color-light-rgb), 0.05));
+        
     /** Neon Effects **/
     --neon-primary: 0px 0px 18px rgba(var(--ion-color-primary-rgb), 0.4),
         0px 0px 70px rgba(var(--ion-color-primary-rgb), 0.4);

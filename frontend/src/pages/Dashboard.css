@@ -1,0 +1,85 @@
+.dashboard-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 6vh;
+    transform: translateY(6vh);
+    /* height: 78vh; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(40vh, auto);
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.popular-stocks {
+    margin-top: 1rem;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    grid-auto-rows: minmax(15vh, auto);
+    grid-auto-columns: auto;
+    overflow: hidden;
+}
+
+.popular-stocks h2 {
+    text-align: left;
+    grid-column: 1 / 4;
+    grid-row: 1 / 1;
+    margin-bottom: -2rem;
+}
+
+.dashboard-watchlist {
+    grid-column: 4 / 4;
+}
+
+.ellipse-stock {
+    /* grid-row-start: 2; */
+    width: 250px;
+    height: 250px;
+    display: flex;
+    text-align: center !important;
+    flex-direction: column;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+@media only screen and (max-width: 1250px) {
+    .dashboard-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .popular-stocks {
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-watchlist {
+        grid-column: 1 / 4;
+        grid-row: 2 / 2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(40vh, auto);
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .dashboard-container {
+        grid-template-columns: repeat(1, 1fr);
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .ellipse-stock {
+        grid-column: 1 / 1;
+        width: 300px;
+        height: 300px;
+    }
+
+}

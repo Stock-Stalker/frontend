@@ -1,47 +1,38 @@
-import React, { useState, useCallback } from 'react'
-import { useParams } from 'react-router-dom'
-import { useQuery } from 'react-query'
-import api from '../api'
+import React, { useState } from 'react'
 import LineGraph from '../components/LineGraph'
 import TimeFrameButtons from '../components/TimeFrameButtons'
+import WatchlistToggle from '../components/WatchlistToggle'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
-interface Prediction {
-    prediction: boolean
-}
-
-interface ParamTypes {
+interface StockInfo {
+    companyName: string
+    currentPrice: string
+    prediction: number
+    historicalData: Array<any>
     symbol: string
+    isLoading: boolean
+    isError: boolean
 }
-
-const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
+const StockInfoChart: React.FC<StockInfo> = ({
+    companyName,
+    currentPrice,
+    prediction,
+    historicalData,
+    symbol,
+    isLoading,
+    isError
+}) => {
     const [timeFrame, setTimeFrame] = useState<string>('D')
-    const { symbol } = useParams<ParamTypes>()
-
-    const fetchStockData = useCallback(async () => {
-        const res = await api.get(`/stock/${symbol}`)
-        return res.data
-    }, [])
-
-    const { data, isLoading, isError } = useQuery('weekly', fetchStockData, {
-        retry: false,
-        staleTime: Infinity,
-    })
 
     if (isLoading) {
-        return <h3>Loading...</h3>
+        return (
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+        )
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
     } else {
         const timeFrames = ['D']
-
-        const {
-            companyName,
-            currentPrice,
-            historicalData,
-            symbol,
-        } = data.stockData
 
         const getTimeFrames = () => {
             switch (true) {
@@ -126,6 +117,10 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     {companyName.split('-')[0]}{' '}
                     <span className="company-symbol">{symbol}</span>
                 </h3>
+                <WatchlistToggle
+                    symbol={ symbol }
+                    prediction={ prediction }
+                />
                 <div className="glass-primary card card-stock">
                     <h3>$ {parseInt(currentPrice).toFixed(2)}</h3>
                     <span className={`text-${color}`}>
@@ -138,14 +133,14 @@ const StockInfoChart: React.FC<Prediction> = ({ prediction }) => {
                     </span>
                     <div className={`chart glass-${color}`}>
                         <LineGraph
-                            prediction={isPositive}
+                            isPositive={isPositive}
                             graphData={graphData}
                             baseline={baseline}
                             timeFrame={timeFrame}
                         />
                     </div>
                     <TimeFrameButtons
-                        prediction={isPositive}
+                        color={color}
                         selectedTimeFrame={timeFrame}
                         timeFrames={timeFrames}
                         toggleTimeFrame={(t: string) => setTimeFrame(t)}

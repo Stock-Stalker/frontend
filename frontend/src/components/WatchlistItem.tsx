@@ -1,13 +1,13 @@
 import React from 'react'
-import { IonRouterLink } from '@ionic/react'
+import { Link } from 'react-router-dom'
 import './WatchlistItem.css'
 import arrowUp from '../assets/stockStalkerArrowUp.svg'
 import arrowDown from '../assets/stockStalkerArrowDown.svg'
 
 interface WatchlistItemDetails {
     symbol: string
-    price: number
-    prediction: boolean
+    price: string
+    prediction: number
 }
 
 const WatchlistItem: React.FC<WatchlistItemDetails> = ({
@@ -15,24 +15,24 @@ const WatchlistItem: React.FC<WatchlistItemDetails> = ({
     price,
     prediction,
 }) => {
-    const color = prediction ? 'tertiary' : 'secondary'
+    const color = prediction === 1 ? 'tertiary' : prediction === 0 ? 'secondary' : 'light'
 
     return (
-        <IonRouterLink href={`/stock/${symbol}`} key={symbol}>
+        <Link to={`/stock/${symbol}`} key={symbol}>
             <div className={`watchlist-item text-${color}`}>
                 <h5>{symbol}</h5>
                 <div className="watchlist-item-details">
-                    <p className={`text-${color}`}>${price}</p>
+                    <p className={`text-${color}`}>${ parseFloat(price).toFixed(2) }</p>
                     <span className={`text-${color}`}>
                         <img
                             width="30px"
-                            src={prediction ? arrowUp : arrowDown}
+                            src={prediction === 0 ? arrowDown : arrowUp}
                             alt="StockStalker Arrow"
                         />
                     </span>
                 </div>
             </div>
-        </IonRouterLink>
+        </Link>
     )
 }
 
