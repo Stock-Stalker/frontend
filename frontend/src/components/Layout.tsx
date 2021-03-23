@@ -1,5 +1,5 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 import { IonPage, IonContent, IonHeader } from '@ionic/react'
 import { useSelector } from 'react-redux';
 import { AppState } from '../types'
@@ -20,12 +20,12 @@ const Layout: React.FC<LayoutProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <div className="header-content">
-                    <img
+                    <Link to="/"><img
                         src={logo}
                         className="logo"
                         width="150px"
                         alt="Stock Stalker Logo"
-                    />
+                    /></Link>
                     {props.searchbar && (
                         <div className="searchbar-container">
                             <SearchBar />
