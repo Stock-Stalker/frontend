@@ -8,6 +8,10 @@ h6 {
     font-family: var(--ion-font-family) !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .ellipse {
     border-radius: 200%;
 }
