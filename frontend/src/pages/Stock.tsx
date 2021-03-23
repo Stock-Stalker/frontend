@@ -28,10 +28,28 @@ const Stock: React.FC = () => {
             <Layout searchbar={true}>
                 <div className="stock-container">
                     <div className="col-1-2">
-                        <h3>Loading...</h3>
+                        <div className="lds-ring">
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
                     </div>
                     <div className="col-3">
-                        <h3>Loading...</h3>
+                        <div className="lds-ring">
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
                         <Watchlist />
                     </div>
                 </div>

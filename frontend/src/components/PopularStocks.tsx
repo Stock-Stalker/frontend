@@ -16,7 +16,9 @@ const PopularStocks: React.FC = () => {
     )
 
     if (isLoading) {
-        return <h3>Loading...</h3>
+        return (
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+        )
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
     } else {
@@ -29,7 +31,7 @@ const PopularStocks: React.FC = () => {
                             key={ stock.symbol }
                             companyName=""
                             symbol={ stock.symbol }
-                            currentPrice={ stock.currentPrice }
+                            currentPrice={ parseFloat(stock.currentPrice).toFixed(2) }
                             prediction={ stock.prediction }
                         />
                     )

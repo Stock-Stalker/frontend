@@ -26,7 +26,9 @@ const StockInfoChart: React.FC<StockInfo> = ({
     const [timeFrame, setTimeFrame] = useState<string>('D')
 
     if (isLoading) {
-        return <h3>Loading...</h3>
+        return (
+            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+        )
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
     } else {
