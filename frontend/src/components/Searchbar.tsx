@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import api from '../api'
-// import { Stock } from '../types'
+import { Stock } from '../types'
 import { IonSearchbar } from '@ionic/react'
 import './Searchbar.css'
 
@@ -21,15 +21,26 @@ const SearchBar: React.FC = () => {
     useEffect(() => {
         loadStockList()
     }, [])
-    const filteredStocks =
-        stockList &&
-        stockList.filter((stock) => {
-            const searchable = stock.companyName.split('-')[0] + stock.symbol
-            const searchTerms = searchTerm.toLowerCase().trim().split(' ')
-            return searchTerms.every((term) => {
-                return searchable.toLowerCase().includes(term)
-            })
+
+    function filter (comparator: (stock: Stock) => boolean, array: any[]) {
+        const result: any[] = []
+        for (let i = 0; i < array.length; i++) {
+            if (comparator(array[i])) {
+                result.push(array[i])
+            }
+        }
+        return result
+    }
+
+    function searchComparator(stock: Stock) {
+        const searchable = stock.companyName.split('-')[0] + stock.symbol
+        const searchTerms = searchTerm.toLowerCase().trim().split(' ')
+        return searchTerms.every((term) => {
+            return searchable.toLowerCase().includes(term)
         })
+    }
+    const filteredStocks = stockList && filter(searchComparator, stockList)
+    
     return (
         <>
             <IonSearchbar
