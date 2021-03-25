@@ -11,7 +11,7 @@ const SearchBar: React.FC = () => {
 
     async function loadStockList() {
         try {
-            const res: any = await api.get('/stock')
+            const res: any = await api.get('/api/stock')
             setStockList(res.data)
         } catch (err) {
             console.log(err)

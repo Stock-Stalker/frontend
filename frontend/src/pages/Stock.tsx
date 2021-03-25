@@ -16,7 +16,7 @@ const Stock: React.FC = () => {
     const { symbol } = useParams<ParamTypes>()
 
     const fetchStockData = async () => {
-        const res = await api.get(`/stock/${symbol}`)
+        const res = await api.get(`/api/stock/${symbol}`)
         return res.data
     }
 

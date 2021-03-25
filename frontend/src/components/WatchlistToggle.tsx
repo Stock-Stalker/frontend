@@ -22,7 +22,7 @@ const WatchlistToggle: React.FC<WatchlistToggleProps> = (props) => {
 
     async function toggleWatchlist() {
         try {
-            const res = await api.patch('/user/watchlist', {
+            const res = await api.patch('/api/user/watchlist', {
                 symbol: symbol,
             })
             props.setWatchlist(res.data)

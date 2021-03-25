@@ -5,7 +5,7 @@ import StockEllipse from './StockEllipse'
 
 const PopularStocks: React.FC = () => {
     const fetchStockData = async () => {
-        const res = await api.get('/stock/popular')
+        const res = await api.get('/api/stock/popular')
         return res.data
     }
 

@@ -24,7 +24,7 @@ const SignIn: React.FC<Auth> = (props) => {
             password.length > 0
         ) {
             try {
-                const res: any = await api.post('/user/signin', {
+                const res: any = await api.post('/api/user/signin', {
                     username: username,
                     password: password,
                 })

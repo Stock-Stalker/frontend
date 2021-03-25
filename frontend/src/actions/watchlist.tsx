@@ -12,7 +12,7 @@ export const setWatchlist = (watchlist: Stock[]) => {
 export const loadWatchlist = () => {
     return async (dispatch: any) => {
         try {
-            const res = await api.get('/user/watchlist')
+            const res = await api.get('/api/user/watchlist')
             dispatch(setWatchlist(res.data));
         } catch (error) {
             if (typeof error.response !== 'undefined' && error.response.status === 401) {
