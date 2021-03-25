@@ -14,6 +14,4 @@ COPY frontend .
 
 RUN npm run build
 
-RUN ls -a
-
 CMD ["npm", "run", "start-prod"]
