@@ -6,12 +6,14 @@ WORKDIR /usr/src/app
 
 COPY frontend/package*.json ./
 
-RUN npm install -g @ionic/cli native-run cordova-res --unsafe-perm serve
+RUN npm install -g ionic @ionic/cli native-run cordova-res --unsafe-perm serve
 
 RUN npm ci
 
 COPY frontend .
 
 RUN npm run build
+
+RUN ls -a
 
 CMD ["npm", "run", "start-prod"]
