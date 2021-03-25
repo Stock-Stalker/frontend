@@ -22,10 +22,10 @@ const SearchBar: React.FC = () => {
         loadStockList()
     }, [])
 
-    function filter (comparator: (stock: Stock) => boolean, array: any[]) {
+    function filter(comparator: (stock: Stock) => boolean, array: any[]) {
         const result: any[] = []
         for (let i = 0; i < array.length; i++) {
-            if (comparator(array[i])) {
+            if (array[i] && comparator(array[i])) {
                 result.push(array[i])
             }
         }
@@ -33,14 +33,19 @@ const SearchBar: React.FC = () => {
     }
 
     function searchComparator(stock: Stock) {
-        const searchable = stock.companyName.split('-')[0] + stock.symbol
+        const searchable = stock.companyName
+            ? stock.companyName.split('-')[0] + stock.symbol
+            : ''
         const searchTerms = searchTerm.toLowerCase().trim().split(' ')
         return searchTerms.every((term) => {
             return searchable.toLowerCase().includes(term)
         })
     }
-    const filteredStocks = stockList && filter(searchComparator, stockList)
-    
+    const checkFilter = stockList && searchTerm && searchTerm.length > 0
+    const filteredStocks = checkFilter
+        ? filter(searchComparator, stockList)
+        : []
+
     return (
         <>
             <IonSearchbar
@@ -57,8 +62,7 @@ const SearchBar: React.FC = () => {
                             <Link
                                 to={'/stock/' + stock.symbol}
                                 key={stock.symbol + index.toString()}
-                                onClick={(e) => setSearchTerm('')}
-                            >
+                                onClick={(e) => setSearchTerm('')}>
                                 <div className="result">
                                     <span>
                                         {stock.symbol +
