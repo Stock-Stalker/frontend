@@ -1,0 +1,63 @@
+.welcome-container {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container strong {
+    font-size: 20px;
+    line-height: 26px;
+}
+
+.container p {
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+.container a {
+    text-decoration: none;
+}
+
+.welcome {
+    max-width: 50vw;
+    width: 50vw;
+    min-width: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.welcome-aspect-ratio {
+    padding-top: 100%;
+}
+
+.welcome-content {
+    margin-top: -20%;
+    word-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-content h3 {
+    margin: auto;
+    max-width: 400px;
+}
+
+.welcome input {
+    margin-top: 10%;
+}
+
+.welcome-content .search-results {
+    max-width: 445px;
+}
+
+@media only screen and (max-width: 900px) {
+    .welcome {
+        margin-left: calc((100% - 600px) / 2);
+    }
+}

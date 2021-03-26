@@ -1,0 +1,9 @@
+.timeFrameButtonContainer {
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
