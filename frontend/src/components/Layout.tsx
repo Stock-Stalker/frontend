@@ -42,7 +42,7 @@ const Layout: React.FC<LayoutProps> = (props) => {
                                 Sign in
                             </button>
                             <button
-                                className="sign-up"
+                                className="sign-up text-background"
                                 onClick={() => history.push('/signup') }
                             >
                                 Sign up

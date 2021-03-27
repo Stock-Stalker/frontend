@@ -5,77 +5,68 @@ http://ionicframework.com/docs/theming/ */
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap');
 /** Ionic CSS Variables **/
 :root {
-    /** primary **/
-    --ion-color-primary: rgba(0, 121, 211, 1);
-    --ion-color-primary-rgb: 0, 121, 211;
-    --ion-color-primary-contrast: #ffffff;
-    --ion-color-primary-contrast-rgb: 255, 255, 255;
-    --ion-color-primary-shade: rgba(2, 95, 153, 1);
-    --ion-color-primary-tint: rgba(0, 121, 211, 0.8);
+    --ion-color-primary: #dbdbdb;
+    --ion-color-primary-rgb: 219,219,219;
+    --ion-color-primary-contrast: #000000;
+    --ion-color-primary-contrast-rgb: 0,0,0;
+    --ion-color-primary-shade: #c1c1c1;
+    --ion-color-primary-tint: #dfdfdf;
 
-    /** secondary **/
-    --ion-color-secondary: rgba(255, 175, 92, 1);
-    --ion-color-secondary-rgb: 255, 175, 92;
-    --ion-color-secondary-contrast: #ffffff;
-    --ion-color-secondary-contrast-rgb: 255, 255, 255;
-    --ion-color-secondary-shade: rgba(255, 140, 63, 1);
-    --ion-color-secondary-tint: rgba(255, 175, 92, 0.8);
+    --ion-color-secondary: #ffaf5c;
+    --ion-color-secondary-rgb: 255,175,92;
+    --ion-color-secondary-contrast: #000000;
+    --ion-color-secondary-contrast-rgb: 0,0,0;
+    --ion-color-secondary-shade: #e09a51;
+    --ion-color-secondary-tint: #ffb76c;
 
-    /** tertiary **/
-    --ion-color-tertiary: rgba(125, 250, 255, 1);
-    --ion-color-tertiary-rgb: 125, 250, 255;
-    --ion-color-tertiary-contrast: rgba(53, 52, 58, 1);
-    --ion-color-tertiary-contrast-rgb: 53, 52, 58;
-    --ion-color-tertiary-shade: rgba(114, 244, 247, 1);
-    --ion-color-tertiary-tint: rgba(125, 250, 255, 0.8);
+    --ion-color-tertiary: #7dfaff;
+    --ion-color-tertiary-rgb: 125,250,255;
+    --ion-color-tertiary-contrast: #000000;
+    --ion-color-tertiary-contrast-rgb: 0,0,0;
+    --ion-color-tertiary-shade: #6edce0;
+    --ion-color-tertiary-tint: #8afbff;
 
-    /** success **/
     --ion-color-success: #2dd36f;
-    --ion-color-success-rgb: 45, 211, 111;
+    --ion-color-success-rgb: 45,211,111;
     --ion-color-success-contrast: #ffffff;
-    --ion-color-success-contrast-rgb: 255, 255, 255;
+    --ion-color-success-contrast-rgb: 255,255,255;
     --ion-color-success-shade: #28ba62;
     --ion-color-success-tint: #42d77d;
 
-    /** warning **/
     --ion-color-warning: #ffc409;
-    --ion-color-warning-rgb: 255, 196, 9;
+    --ion-color-warning-rgb: 255,196,9;
     --ion-color-warning-contrast: #000000;
-    --ion-color-warning-contrast-rgb: 0, 0, 0;
+    --ion-color-warning-contrast-rgb: 0,0,0;
     --ion-color-warning-shade: #e0ac08;
     --ion-color-warning-tint: #ffca22;
 
-    /** danger **/
     --ion-color-danger: #eb445a;
-    --ion-color-danger-rgb: 235, 68, 90;
+    --ion-color-danger-rgb: 235,68,90;
     --ion-color-danger-contrast: #ffffff;
-    --ion-color-danger-contrast-rgb: 255, 255, 255;
+    --ion-color-danger-contrast-rgb: 255,255,255;
     --ion-color-danger-shade: #cf3c4f;
     --ion-color-danger-tint: #ed576b;
 
-    /** dark **/
-    --ion-color-dark: rgba(53, 52, 58, 1);
-    --ion-color-dark-rgb: 53, 52, 58;
+    --ion-color-dark: #34343a;
+    --ion-color-dark-rgb: 52,52,58;
     --ion-color-dark-contrast: #ffffff;
-    --ion-color-dark-contrast-rgb: 255, 255, 255;
-    --ion-color-dark-shade: #1e2023;
-    --ion-color-dark-tint: #383a3e;
+    --ion-color-dark-contrast-rgb: 255,255,255;
+    --ion-color-dark-shade: #2e2e33;
+    --ion-color-dark-tint: #48484e;
 
-    /** medium **/
     --ion-color-medium: #92949c;
-    --ion-color-medium-rgb: 146, 148, 156;
+    --ion-color-medium-rgb: 146,148,156;
     --ion-color-medium-contrast: #ffffff;
-    --ion-color-medium-contrast-rgb: 255, 255, 255;
+    --ion-color-medium-contrast-rgb: 255,255,255;
     --ion-color-medium-shade: #808289;
     --ion-color-medium-tint: #9d9fa6;
 
-    /** light **/
-    --ion-color-light: rgba(219, 219, 219, 1);
-    --ion-color-light-rgb: 219, 219, 219;
-    --ion-color-light-contrast: #1e2023;
-    --ion-color-light-contrast-rgb: 30, 32, 35;
-    --ion-color-light-shade: #d7d8da;
-    --ion-color-light-tint: #f5f6f9;
+    --ion-color-light: rgba(0, 121, 211, 1);
+    --ion-color-light-rgb: 0, 121, 211;
+    --ion-color-light-contrast: #ffffff;
+    --ion-color-light-contrast-rgb: 255, 255, 255;
+    --ion-color-light-shade: rgba(2, 95, 153, 1);
+    --ion-color-light-tint: rgba(0, 121, 211, 0.8);
 
     /** Gradients **/
 
@@ -131,20 +122,20 @@ http://ionicframework.com/docs/theming/ */
         inset 0px 82px 68px -64px rgba(var(--ion-color-secondary-rgb), 0.1),
         inset 0px -98px 100px -48px rgba(var(--ion-color-secondary-rgb), 0.1),
         inset 0px -4px 18px 0px rgba(var(--ion-color-secondary-rgb), 0.1),
-        inset 0px -1px 40px 0px rgba(var(--ion-color-secondary-rgb), 0.05)5);
+        inset 0px -1px 40px 0px rgba(var(--ion-color-secondary-rgb), 0.05);
 
     --glass-input-tertiary: inset 0px -4px 4px 0px rgba(var(--ion-color-tertiary-rgb), 0.1),
         inset 0px 82px 68px -64px rgba(var(--ion-color-tertiary-rgb), 0.1),
         inset 0px -98px 100px -48px rgba(var(--ion-color-tertiary-rgb), 0.1),
         inset 0px -4px 18px 0px rgba(var(--ion-color-tertiary-rgb), 0.1),
-        inset 0px -1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.05));
+        inset 0px -1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.05);
 
     --glass-input-light: inset 0px -4px 4px 0px rgba(var(--ion-color-light-rgb), 0.1),
         inset 0px 82px 68px -64px rgba(var(--ion-color-light-rgb), 0.1),
         inset 0px -98px 100px -48px rgba(var(--ion-color-light-rgb), 0.1),
         inset 0px -4px 18px 0px rgba(var(--ion-color-light-rgb), 0.1),
-        inset 0px -1px 40px 0px rgba(var(--ion-color-light-rgb), 0.05));
-        
+        inset 0px -1px 40px 0px rgba(var(--ion-color-light-rgb), 0.05);
+
     /** Neon Effects **/
     --neon-primary: 0px 0px 18px rgba(var(--ion-color-primary-rgb), 0.4),
         0px 0px 70px rgba(var(--ion-color-primary-rgb), 0.4);
@@ -161,9 +152,14 @@ http://ionicframework.com/docs/theming/ */
     --neon-tertiary-inset: inset 0px 0px 7px
         rgba(var(--ion-color-tertiary-rgb), 0.4);
 
-    --ion-toolbar-background: var(--ion-color-dark);
+    --ion-toolbar-background: var(--ion-color-light);
 
     --ion-font-family: 'Rubik', sans-serif;
+
+    --ion-background-color: var(--ion-color-light);
+    --ion-background-color-rgb: 53, 52, 58;
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255, 255, 255;
 }
 
 @media only screen and (prefers-color-scheme: dark) {
@@ -240,6 +236,75 @@ http://ionicframework.com/docs/theming/ */
         --ion-color-light-contrast-rgb: 30, 32, 35;
         --ion-color-light-shade: #d7d8da;
         --ion-color-light-tint: #f5f6f9;
+
+        /** Glass Effects **/
+        --glass-primary: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5),
+            inset 0px 1px 4px 0px rgba(var(--ion-color-primary-rgb), 0.3),
+            inset 0px -82px 68px -64px rgba(var(--ion-color-primary-rgb), 0.3),
+            inset 0px 98px 100px -48px rgba(var(--ion-color-primary-rgb), 0.3),
+            inset 0px 4px 18px 0px rgba(var(--ion-color-primary-rgb), 0.3),
+            inset 0px 1px 40px 0px rgba(var(--ion-color-primary-rgb), 0.2);
+
+        --glass-secondary: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5),
+            inset 0px 1px 4px 0px rgba(var(--ion-color-secondary-rgb), 0.3),
+            inset 0px -82px 68px -64px rgba(var(--ion-color-secondary-rgb), 0.3),
+            inset 0px 98px 100px -48px rgba(var(--ion-color-secondary-rgb), 0.3),
+            inset 0px 4px 18px 0px rgba(var(--ion-color-secondary-rgb), 0.3),
+            inset 0px 1px 40px 0px rgba(var(--ion-color-secondary-rgb), 0.2);
+
+        --glass-tertiary: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5),
+            inset 0px 1px 4px 0px rgba(var(--ion-color-tertiary-rgb), 0.3),
+            inset 0px -82px 68px -64px rgba(var(--ion-color-tertiary-rgb), 0.3),
+            inset 0px 98px 100px -48px rgba(var(--ion-color-tertiary-rgb), 0.3),
+            inset 0px 4px 18px 0px rgba(var(--ion-color-tertiary-rgb), 0.3),
+            inset 0px 1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.2);
+
+        --glass-light: inset 0px 39px 56px -36px rgba(255, 255, 255, 0.5),
+            inset 0px 1px 4px 0px rgba(var(--ion-color-light-rgb), 0.3),
+            inset 0px -82px 68px -64px rgba(var(--ion-color-light-rgb), 0.3),
+            inset 0px 98px 100px -48px rgba(var(--ion-color-light-rgb), 0.3),
+            inset 0px 4px 18px 0px rgba(var(--ion-color-light-rgb), 0.3),
+            inset 0px 1px 40px 0px rgba(var(--ion-color-light-rgb), 0.2);
+
+        --glass-input-primary: inset 0px -4px 4px 0px rgba(var(--ion-color-primary-rgb), 0.1),
+            inset 0px 82px 68px -64px rgba(var(--ion-color-primary-rgb), 0.1),
+            inset 0px -98px 100px -48px rgba(var(--ion-color-primary-rgb), 0.1),
+            inset 0px -4px 18px 0px rgba(var(--ion-color-primary-rgb), 0.1),
+            inset 0px -1px 40px 0px rgba(var(--ion-color-primary-rgb), 0.05);
+
+        --glass-input-secondary: inset 0px -4px 4px 0px rgba(var(--ion-color-secondary-rgb), 0.1),
+            inset 0px 82px 68px -64px rgba(var(--ion-color-secondary-rgb), 0.1),
+            inset 0px -98px 100px -48px rgba(var(--ion-color-secondary-rgb), 0.1),
+            inset 0px -4px 18px 0px rgba(var(--ion-color-secondary-rgb), 0.1),
+            inset 0px -1px 40px 0px rgba(var(--ion-color-secondary-rgb), 0.05);
+
+        --glass-input-tertiary: inset 0px -4px 4px 0px rgba(var(--ion-color-tertiary-rgb), 0.1),
+            inset 0px 82px 68px -64px rgba(var(--ion-color-tertiary-rgb), 0.1),
+            inset 0px -98px 100px -48px rgba(var(--ion-color-tertiary-rgb), 0.1),
+            inset 0px -4px 18px 0px rgba(var(--ion-color-tertiary-rgb), 0.1),
+            inset 0px -1px 40px 0px rgba(var(--ion-color-tertiary-rgb), 0.05);
+
+        --glass-input-light: inset 0px -4px 4px 0px rgba(var(--ion-color-light-rgb), 0.1),
+            inset 0px 82px 68px -64px rgba(var(--ion-color-light-rgb), 0.1),
+            inset 0px -98px 100px -48px rgba(var(--ion-color-light-rgb), 0.1),
+            inset 0px -4px 18px 0px rgba(var(--ion-color-light-rgb), 0.1),
+            inset 0px -1px 40px 0px rgba(var(--ion-color-light-rgb), 0.05);
+
+        /** Neon Effects **/
+        --neon-primary: 0px 0px 18px rgba(var(--ion-color-primary-rgb), 0.4),
+            0px 0px 70px rgba(var(--ion-color-primary-rgb), 0.4);
+        --neon-primary-inset: inset 0px 0px 7px
+            rgba(var(--ion-color-primary-rgb), 0.4);
+
+        --neon-secondary: 0px 0px 18px rgba(var(--ion-color-secondary-rgb), 0.4),
+            0px 0px 70px rgba(var(--ion-color-secondary-rgb), 0.4);
+        --neon-secondary-inset: inset 0px 0px 7px
+            rgba(var(--ion-color-secondary-rgb), 0.4);
+
+        --neon-tertiary: 0px 0px 18px rgba(var(--ion-color-tertiary-rgb), 0.4),
+            0px 0px 70px rgba(var(--ion-color-tertiary-rgb), 0.4);
+        --neon-tertiary-inset: inset 0px 0px 7px
+            rgba(var(--ion-color-tertiary-rgb), 0.4);
     }
 
     /*
