@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Redirect } from 'react-router-dom'
 import api from '../api'
-import { connect } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 import { setToken } from '../actions/token'
 import Layout from '../components/Layout'
 import './Auth.css'
@@ -11,6 +11,7 @@ interface Auth {
 }
 
 const SignIn: React.FC<Auth> = (props) => {
+    const { token } = useSelector((state: any) => state)
     const history = useHistory()
     const [username, setUsername] = useState<string>('')
     const [password, setPassword] = useState<string>('')
@@ -38,6 +39,9 @@ const SignIn: React.FC<Auth> = (props) => {
             setErrorMessage('Username or password is invalid')
         }
     }
+    
+    if (token) return <Redirect to="/dashboard" />
+    
     return (
         <Layout>
             <div className="container">
