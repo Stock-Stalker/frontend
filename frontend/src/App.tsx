@@ -36,13 +36,12 @@ const App: React.FC<AppProps> = (props) => {
 
     async function refreshToken() {
         const rToken = localStorage.getItem('token')
-        console.log('!state.token && rToken: ' + !state.token && rToken)
         if (!state.token && rToken) {
             try {
-                const response: any = await api.post('/refresh', {
+                api.defaults.headers.common.Authorization = 'Bearer ' + localStorage.getItem('token')
+                const response: any = await api.post('/api/user/refresh', {
                     refreshToken: rToken,
                 })
-                console.log(response)
                 localStorage.setItem('token', response.data.token)
                 props.setToken(response.data.token)
             } catch (e) {
@@ -60,7 +59,6 @@ const App: React.FC<AppProps> = (props) => {
         }
         refreshToken()
     }, [state.token])
-    console.log(refreshCheck)
     return (
         <IonApp>
             <IonReactRouter>
@@ -72,11 +70,11 @@ const App: React.FC<AppProps> = (props) => {
                     <Route exact path="/dashboard" component={ Dashboard } />
                     <Route exact path="/stock/:symbol" component={ StockComponent } />
                     <Route exact path="/">
-                        { state.token ?
-                            <Redirect to="/dashboard" />
-                            :
-                            <Redirect to="/welcome" />
-                        }
+                    { state.token && refreshCheck ?
+                        <Redirect to="/dashboard" />
+                        :
+                        <Redirect to="/welcome" />
+                    }
                     </Route>
                 </Switch>
             </IonReactRouter>
