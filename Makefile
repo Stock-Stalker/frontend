@@ -1,28 +1,22 @@
 -include secrets.mk
 
 build :
-				docker-compose -f docker-compose.dev.yml build --force-rm --no-cache
+				docker-compose build --force-rm --no-cache
 
 start:
-				docker-compose -f docker-compose.dev.yml up
+				docker-compose up
 
 stop :
 				docker-compose down --remove-orphans
 
 debug :
-				docker-compose -f docker-compose.dev.yml --verbose up
+				docker-compose --verbose up
 
 reload:
-				docker-compose down && docker-compose -f docker-compose.dev.yml up
+				docker-compose down && docker-compose up
 
 test-security:
 				snyk config set api=$(snyk_auth_token) && snyk test
-
-start-prod :
-				docker-compose up -d
-
-debug-prod:
-				docker-compose --verbose up
 
 lint:
 				npm run lint
