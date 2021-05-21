@@ -26,10 +26,6 @@
 
 `test-security`: Test security vulnerabilities (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
 
-`start-prod`: Start the production server
-
-`debug-prod`: Start the production server in debug mode
-
 ## How to Run
 
 To run the app you will need:
