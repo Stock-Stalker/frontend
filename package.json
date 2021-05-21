@@ -53,7 +53,7 @@
         "dev": "ionic serve",
         "build": "ionic build",
         "start-prod": "serve -s build -l 8100",
-        "test": "snyk test && react-scripts test",
+        "test": "react-scripts test",
         "eject": "react-scripts eject",
         "format": "prettier --write \"src/**/*.{ts,tsx,js,jsx,json,css}\"",
         "lint-files": "eslint --fix \"src/**/*.{ts,tsx,js,jsx}\"",
