@@ -18,6 +18,9 @@ reload:
 test-security:
 				snyk config set api=$(snyk_auth_token) && snyk test
 
+test-image-security:
+				snyk config set api=$(snyk_auth_token) && snyk container test node:lts-alpine --file=Dockerfile --fail-on=upgradable
+
 lint:
 				npm run lint
 
