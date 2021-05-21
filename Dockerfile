@@ -8,7 +8,7 @@ COPY package*.json ./
 
 RUN npm install -g @ionic/cli native-run cordova-res --unsafe-perm serve
 
-RUN npm ci
+RUN npm ci --production
 
 COPY . .
 
