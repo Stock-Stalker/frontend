@@ -6,9 +6,9 @@ WORKDIR /usr/src/app
 
 COPY package.json .
 
-RUN npm install -g react-scripts @ionic/cli native-run cordova-res --unsafe-perm serve
+RUN npm install -g @ionic/cli native-run cordova-res --unsafe-perm serve
 
-RUN npm install --production
+RUN npm install
 
 COPY . .
 
