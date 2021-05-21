@@ -1,4 +1,4 @@
-# StockStalker - Backend API
+# StockStalker - Frontend
 
 ## Makefile Commands
 
