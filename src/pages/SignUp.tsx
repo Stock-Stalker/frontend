@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import './Auth.css'
 
 interface Auth {
-    setToken: (token: string) => void;
+    setToken: (token: string) => void
 }
 
 const SignUp: React.FC<Auth> = (props) => {
@@ -28,7 +28,7 @@ const SignUp: React.FC<Auth> = (props) => {
                     username: username,
                     password: password,
                 })
-                localStorage.setItem('token', res.data.token);
+                localStorage.setItem('token', res.data.token)
                 props.setToken(res.data.token)
                 history.push('/dashboard')
             } catch (error) {
@@ -80,7 +80,4 @@ const SignUp: React.FC<Auth> = (props) => {
     )
 }
 
-export default connect(
-  null,
-  { setToken }
-)(SignUp)
+export default connect(null, { setToken })(SignUp)

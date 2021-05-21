@@ -1,6 +1,6 @@
 import React from 'react'
 import { Redirect } from 'react-router-dom'
-import { useSelector, connect } from 'react-redux';
+import { useSelector, connect } from 'react-redux'
 import { AppState } from '../types'
 import Layout from '../components/Layout'
 import PopularStocks from '../components/PopularStocks'
@@ -28,6 +28,6 @@ const Dashboard: React.FC = () => {
 const mapStateToProps = (state: AppState) => {
     return {
         token: state.token,
-    };
-};
-export default connect(mapStateToProps) (Dashboard);
+    }
+}
+export default connect(mapStateToProps)(Dashboard)

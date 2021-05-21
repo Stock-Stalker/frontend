@@ -14,7 +14,6 @@ const TimeFrameButton: React.FC<TimeFrame> = ({
     selectedTimeFrame,
     toggleTimeFrame,
 }) => {
-
     return (
         <div
             className={`timeFrameButton bg-desat-${

@@ -21,13 +21,18 @@ const StockInfoChart: React.FC<StockInfo> = ({
     historicalData,
     symbol,
     isLoading,
-    isError
+    isError,
 }) => {
     const [timeFrame, setTimeFrame] = useState<string>('D')
 
     if (isLoading) {
         return (
-            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         )
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
@@ -117,10 +122,7 @@ const StockInfoChart: React.FC<StockInfo> = ({
                     {companyName.split('-')[0]}{' '}
                     <span className="company-symbol">{symbol}</span>
                 </h3>
-                <WatchlistToggle
-                    symbol={ symbol }
-                    prediction={ prediction }
-                />
+                <WatchlistToggle symbol={symbol} prediction={prediction} />
                 <div className="glass-primary card card-stock">
                     <h3>$ {parseInt(currentPrice).toFixed(2)}</h3>
                     <span className={`text-${color}`}>

@@ -69,7 +69,6 @@ a {
     background: rgba(var(--ion-color-light-rgb), 0.4);
 }
 
-
 .glass-input-primary {
     background: rgba(255, 255, 255, 0.01);
     box-shadow: var(--glass-input-primary);
@@ -190,7 +189,6 @@ a {
         transform: rotate(360deg);
     }
 }
-
 
 @media only screen and (min-width: 900px) {
     h1 {

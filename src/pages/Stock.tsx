@@ -20,8 +20,10 @@ const Stock: React.FC = () => {
         return res.data
     }
 
-    const { data, isLoading, isError } = useQuery(['stock', { symbol } ], fetchStockData)
-
+    const { data, isLoading, isError } = useQuery(
+        ['stock', { symbol }],
+        fetchStockData
+    )
 
     if (isLoading) {
         return (
@@ -29,26 +31,18 @@ const Stock: React.FC = () => {
                 <div className="stock-container">
                     <div className="col-1-2">
                         <div className="lds-ring">
-                            <div>
-                            </div>
-                            <div>
-                            </div>
-                            <div>
-                            </div>
-                            <div>
-                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                         </div>
                     </div>
                     <div className="col-3">
                         <div className="lds-ring">
-                            <div>
-                            </div>
-                            <div>
-                            </div>
-                            <div>
-                            </div>
-                            <div>
-                            </div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
                         </div>
                         <Watchlist />
                     </div>
@@ -81,18 +75,20 @@ const Stock: React.FC = () => {
                 <div className="stock-container">
                     <div className="col-1-2">
                         <StockInfoChart
-                            companyName={ companyName }
-                            currentPrice={ currentPrice }
-                            prediction={ parseInt(prediction) }
-                            historicalData={ historicalData }
-                            symbol={ symbol }
-                            isLoading={ isLoading }
-                            isError={ isError }
+                            companyName={companyName}
+                            currentPrice={currentPrice}
+                            prediction={parseInt(prediction)}
+                            historicalData={historicalData}
+                            symbol={symbol}
+                            isLoading={isLoading}
+                            isError={isError}
                         />
                     </div>
                     <div className="col-3">
-                        <StockPredictionEllipse prediction={ parseInt(prediction) } />
-                    <Watchlist />
+                        <StockPredictionEllipse
+                            prediction={parseInt(prediction)}
+                        />
+                        <Watchlist />
                     </div>
                 </div>
             </Layout>

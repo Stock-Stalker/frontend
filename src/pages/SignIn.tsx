@@ -7,7 +7,7 @@ import Layout from '../components/Layout'
 import './Auth.css'
 
 interface Auth {
-    setToken: (token: string) => void;
+    setToken: (token: string) => void
 }
 
 const SignIn: React.FC<Auth> = (props) => {
@@ -29,7 +29,7 @@ const SignIn: React.FC<Auth> = (props) => {
                     username: username,
                     password: password,
                 })
-                localStorage.setItem('token', res.data.token);
+                localStorage.setItem('token', res.data.token)
                 props.setToken(res.data.token)
                 history.push('/dashboard')
             } catch (error) {
@@ -39,9 +39,9 @@ const SignIn: React.FC<Auth> = (props) => {
             setErrorMessage('Username or password is invalid')
         }
     }
-    
+
     if (token) return <Redirect to="/dashboard" />
-    
+
     return (
         <Layout>
             <div className="container">
@@ -84,7 +84,4 @@ const SignIn: React.FC<Auth> = (props) => {
     )
 }
 
-export default connect(
-  null,
-  { setToken }
-)(SignIn)
+export default connect(null, { setToken })(SignIn)

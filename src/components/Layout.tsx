@@ -1,7 +1,7 @@
 import React from 'react'
 import { useHistory, Link } from 'react-router-dom'
 import { IonPage, IonContent, IonHeader } from '@ionic/react'
-import { useSelector } from 'react-redux';
+import { useSelector } from 'react-redux'
 import { AppState } from '../types'
 import SearchBar from './Searchbar'
 import SignOut from './SignOut'
@@ -20,35 +20,35 @@ const Layout: React.FC<LayoutProps> = (props) => {
         <IonPage>
             <IonHeader>
                 <div className="header-content">
-                    <Link to="/"><img
-                        src={logo}
-                        className="logo"
-                        width="150px"
-                        alt="Stock Stalker Logo"
-                    /></Link>
+                    <Link to="/">
+                        <img
+                            src={logo}
+                            className="logo"
+                            width="150px"
+                            alt="Stock Stalker Logo"
+                        />
+                    </Link>
                     {props.searchbar && (
                         <div className="searchbar-container">
                             <SearchBar />
                         </div>
                     )}
-                    { token ?
+                    {token ? (
                         <SignOut />
-                        :
+                    ) : (
                         <div className="header-buttons">
                             <button
                                 className="sign-in text-tertiary"
-                                onClick={() => history.push('/signin') }
-                            >
+                                onClick={() => history.push('/signin')}>
                                 Sign in
                             </button>
                             <button
                                 className="sign-up text-background"
-                                onClick={() => history.push('/signup') }
-                            >
+                                onClick={() => history.push('/signup')}>
                                 Sign up
                             </button>
                         </div>
-                    }
+                    )}
                 </div>
             </IonHeader>
             <IonContent fullscreen>

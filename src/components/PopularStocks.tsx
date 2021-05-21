@@ -9,7 +9,10 @@ const PopularStocks: React.FC = () => {
         return res.data
     }
 
-    const { data, isLoading, isError } = useQuery('popularStock', fetchStockData, {
+    const { data, isLoading, isError } = useQuery(
+        'popularStock',
+        fetchStockData,
+        {
             refetchOnWindowFocus: false,
             // enabled: false // needed to handle refetchs manually
         }
@@ -17,7 +20,12 @@ const PopularStocks: React.FC = () => {
 
     if (isLoading) {
         return (
-            <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
+            <div className="lds-ring">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
         )
     } else if (isError) {
         return <h3>Something Went Wrong</h3>
@@ -25,21 +33,23 @@ const PopularStocks: React.FC = () => {
         return (
             <div className="popular-stocks">
                 <h2>Popular Stocks</h2>
-                { data && data.map((stock: any) => {
-                    return (
-                        <StockEllipse
-                            key={ stock.symbol }
-                            companyName=""
-                            symbol={ stock.symbol }
-                            currentPrice={ parseFloat(stock.currentPrice).toFixed(2) }
-                            prediction={ stock.prediction }
-                        />
-                    )
-                } ) }
+                {data &&
+                    data.map((stock: any) => {
+                        return (
+                            <StockEllipse
+                                key={stock.symbol}
+                                companyName=""
+                                symbol={stock.symbol}
+                                currentPrice={parseFloat(
+                                    stock.currentPrice
+                                ).toFixed(2)}
+                                prediction={stock.prediction}
+                            />
+                        )
+                    })}
             </div>
         )
     }
-
 }
 
 export default PopularStocks
