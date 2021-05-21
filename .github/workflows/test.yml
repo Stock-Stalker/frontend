@@ -22,7 +22,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          npm ci
+          npm install
 
       - name: Lint with Prettier and Eslint
         run: |
