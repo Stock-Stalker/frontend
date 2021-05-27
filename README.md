@@ -22,6 +22,8 @@
 
 `reload`: Stop development server and restart the server at port `8080`
 
+`hard-reload`: Stop container, remove container, rebuild container, and start development server
+
 `debug`: Start development server in debug mode
 
 `test-security`: Test security vulnerabilities (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
