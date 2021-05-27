@@ -1,19 +1,22 @@
 -include secrets.mk
 
 build :
-				docker-compose build --force-rm --no-cache
+				docker compose -f docker-compose.dev.yml build --force-rm --no-cache
 
 start:
-				docker-compose up
+				docker compose -f docker-compose.dev.yml up
 
 stop :
-				docker-compose down --remove-orphans
+				docker compose down --remove-orphans
 
 debug :
-				docker-compose --verbose up
+				docker compose -f docker-compose.dev.yml --verbose up
 
 reload:
-				docker-compose down && docker-compose up
+				docker compose down && docker compose -f docker-compose.dev.yml up
+
+hard-reload:
+				docker compose down && docker rmi frontend_frontend && docker compose -f docker-compose.dev.yml up
 
 test-security:
 				snyk config set api=$(snyk_auth_token) && snyk test
