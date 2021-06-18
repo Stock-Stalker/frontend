@@ -36,7 +36,7 @@
 - [How to Run](#how-to-run)
 
 
-## Makefile Commands
+## Make Commands
 
 `stop`: Stop the running server
 
