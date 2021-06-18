@@ -1,22 +1,23 @@
 -include secrets.mk
+compose = docker-compose
+dev = -f docker-compose.dev.yml
+test = -f docker-compose.test.yml
 
 build :
-				export DOCKER_CONTENT_TRUST=1 && docker compose -f docker-compose.dev.yml build --force-rm --no-cache
+				TAG=$$(date +%m%d%H%M%S) && ${compose} ${dev} build --force-rm --no-cache
 
 start:
-				export DOCKER_CONTENT_TRUST=1 && docker compose -f docker-compose.dev.yml up
+				TAG=$$(date +%m%d%H%M%S) && ${compose} ${dev} up
 
-stop :
-				docker compose -f docker-compose.dev.yml down --remove-orphans
+stop:
+				${compose} ${dev} down --remove-orphans
 
-debug :
-				docker compose -f docker-compose.dev.yml --verbose up
+debug:
+				TAG=$$(date +%m%d%H%M%S) ${compose} ${dev} --verbose up
 
-reload:
-				docker compose -f docker-compose.dev.yml down && docker compose -f docker-compose.dev.yml up
+reload: stop start
 
-hard-reload:
-				docker compose -f docker-compose.dev.yml down && docker rmi frontend_frontend && docker compose -f docker-compose.dev.yml up
+hard-reload: stop rmi start
 
 test-security:
 				snyk config set api=$(snyk_auth_token) && snyk test
@@ -27,13 +28,13 @@ test-image-security:
 lint:
 				npm run lint
 
-rm :
+rm:
 				docker container prune -f
 				
 rm-all:
 				docker stop $$(docker ps -aq) && docker rm $$(docker ps -aq)
 
-rmi :
+rmi:
 				docker rmi frontend_frontend
 
 rmi-all:
