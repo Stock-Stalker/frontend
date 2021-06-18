@@ -4,6 +4,7 @@
 </p>
 
 <!-- short description -->
+<h3 align="center">The frontend user interface to StockStalker</h3>
 <h1 align="center">StockStalker - Frontend </h1>
 
 <p align="center">
