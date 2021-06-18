@@ -28,6 +28,13 @@
 </p>
 
 
+## Table of Contents
+
+- [Make Commands](#make-commands)
+- [Required Software](#required-software)
+- [How to Run](#how-to-run)
+
+
 ## Makefile Commands
 
 `stop`: Stop the running server
@@ -58,29 +65,42 @@
 
 `test-image-security`: Test security vulnerabilities for base images (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
 
-## How to Run
 
-To run the app you will need:
+## Required Software
 
 - [Docker](https://docs.docker.com/get-docker/)
-- [docker-compse](https://docs.docker.com/compose/install/)
+- [docker-comopse](https://docs.docker.com/compose/install/)
+- [CMake](https://cmake.org/install/)
 
-The `.env` file is not pushed to GitHub. You'll need to create the file in the root of the `backend` directory. And within the `.env` file, you'll need:
 
-- REACT_APP_URI
+## How to Run
 
-Additionally you'll need to create `secrets.mk`, a Makefile at the root of the project with the following vars:
+Clone the repo
+```zsh
+git clone git@github.com:Stock-Stalker/frontend.git
+```
 
-- snyk_auth_token
+cd into the directory
+```zsh
+cd frontend
+```
 
-Once you have your environment fully set up and secrets secured, run:
+Rename `.env.sample` to `.env`
+```zsh
+mv .env.sample .env
+```
 
-```bash
+Edit the `.env` file to contain your environment variables
+```zsh
+vim .env
+```
+
+Run the application!
+```zsh
 make start
 ```
 
 To stop the app press `CNTRL + C`. Then run:
-
-```bash
+```zsh
 make stop
 ```
