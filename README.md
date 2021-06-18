@@ -1,4 +1,32 @@
-# StockStalker - Frontend
+<!-- logo -->
+<p align="center">
+  <img width="300" src="public/assets/icon/icon.png">
+</p>
+
+<!-- short description -->
+<h1 align="center">StockStalker - Frontend </h1>
+
+<p align="center">
+    <!-- license -->
+    <img src="https://img.shields.io/github/license/Stock-Stalker/frontend" />
+    <!-- code size  -->
+    <img src="https://img.shields.io/github/languages/code-size/Stock-Stalker/frontend" />
+    <!-- issues -->
+    <img src="https://img.shields.io/github/issues/Stock-Stalker/frontend" />
+    <!-- pull requests -->
+    <img src="https://img.shields.io/github/issues-pr/Stock-Stalker/frontend" />
+    <!-- number of commits per year -->
+    <img src="https://img.shields.io/github/commit-activity/y/Stock-Stalker/frontend" />
+    <!-- last commit -->
+    <img src="https://img.shields.io/github/last-commit/Stock-Stalker/frontend" />
+    <!-- docker image size -->
+    <img src="https://img.shields.io/docker/image-size/starlightromero/stockstalker-frontend" />
+    <!-- docker pulls -->
+    <img src="https://img.shields.io/docker/pulls/starlightromero/stockstalker-frontend" />
+    <!-- website status -->
+    <img src="https://img.shields.io/website?url=https%3A%2F%2Fstockstalker.tk" />
+</p>
+
 
 ## Makefile Commands
 
