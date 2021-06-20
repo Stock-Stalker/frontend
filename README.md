@@ -62,6 +62,10 @@
 
 `debug`: Start development server in debug mode
 
+`stop-build`: Start build server at port `8080`
+
+`start-build`: Stop build server
+
 `test-security`: Test security vulnerabilities (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
 
 `test-image-security`: Test security vulnerabilities for base images (must have [snyk](https://support.snyk.io/hc/en-us/articles/360003812538-Install-the-Snyk-CLI) installed globally)
