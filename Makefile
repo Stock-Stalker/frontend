@@ -1,7 +1,7 @@
 -include secrets.mk
 compose = docker-compose
 dev = -f docker-compose.dev.yml
-test = -f docker-compose.test.yml
+build = -f docker-compose.build.yml
 
 build :
 				TAG=$$(date +%m%d%H%M%S) && ${compose} ${dev} build --force-rm --no-cache
@@ -14,6 +14,12 @@ stop:
 
 debug:
 				TAG=$$(date +%m%d%H%M%S) ${compose} ${dev} --verbose up
+
+start-build:
+				TAG=$$(date +%m%d%H%M%S) && ${compose} ${build} up
+
+stop-build:
+				${compose} ${build} down --remove-orphans
 
 reload: stop start
 
