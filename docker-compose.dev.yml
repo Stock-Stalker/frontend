@@ -9,6 +9,10 @@ services:
     volumes:
       - ./public:/usr/src/app/public
       - ./src:/usr/src/app/src
+      - ./capacitor.config.json:/usr/src/app/capacitor.config.json
+      - ./ionic.config.json:/usr/src/app/ionic.config.json
+      - ./package.json:/usr/src/app/package.json
+      - ./tsconfig.json:/usr/src/app/tsconfig.json
     env_file:
       - .env
     ports:
