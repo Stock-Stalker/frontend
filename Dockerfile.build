@@ -2,7 +2,9 @@ FROM node:14-buster-slim as build
 
 LABEL decription="Build image for StockStalker frontend."
 
-RUN apt-get update && apt-get -qq -y install curl && curl -sf https://gobinaries.com/tj/node-prune | sh
+# SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# RUN apt-get -qq update && apt-get -qq -y --no-install-recommends install curl=7.64.0-4+deb10u2 && curl -sf https://gobinaries.com/tj/node-prune | sh
 
 WORKDIR /usr/src/app
 
@@ -12,7 +14,8 @@ RUN npm ci
 
 COPY . .
 
-RUN npm run lint && npm run build-prod && npm prune --production && node-prune
+RUN npm run lint && npm run build-prod && npm prune --production
+# && node-prune
 
 FROM gcr.io/distroless/nodejs:14
 
